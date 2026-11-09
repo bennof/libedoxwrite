@@ -12,10 +12,11 @@
  */
 
 import { tableLayout, tableSpec } from "../table.ts";
-import { defaultFilters } from "../../template/defaults.ts";
+import { defaultFilters, escapeHtml } from "../../template/defaults.ts";
 import { componentCall, TemplateEngine, type RenderResult, type TemplateError } from "../../template/index.ts";
 import type { Node } from "../node.ts";
 import { defaultPar, escapeTex, maxPoints } from "../tex.ts";
+import { assignFieldNames, exerciseNumber, fieldNames, gradeScale, KATEX, katexOptions, taskLabel, vars } from "./renderhtml.ts";
 
 /** Component for node types without one of their own: `\name[opt]{children}`. */
 const FALLBACK = "components.command";
@@ -97,3 +98,61 @@ export function renderTexTemplate(doc: Node, engine: TemplateEngine, template?: 
   return engine.render(name, { node: doc });
 }
 
+// ---------------------------------------------------------------------------
+// HTML
+// ---------------------------------------------------------------------------
+
+/**
+ * An HTML engine for edox templates (../templates/html/): delimiters `{` `}`, the
+ * output of `{{ … }}` is HTML-escaped. Returns the errors of the templates, too.
+ */
+export function createHtmlEngine(templates: Record<string, string>): { engine: TemplateEngine; errors: TemplateError[] } {
+  const engine = new TemplateEngine({ escape: escapeHtml });
+
+  /** `{{ render(node=c) }}`: the component for the node's type. */
+  engine.addFunction("render", ({ node }) => {
+    const name = `components.${(node as Node).type}`;
+    return componentCall(engine.hasComponent(name) ? name : FALLBACK, { node });
+  });
+  /** PDF form field names of a points node: one per checkbox, or one text field. */
+  engine.addFunction("fieldNames", ({ node }) => {
+    const names = fieldNames(node as Node);
+    if (names.length) return names;
+    // outside an exercise: fields without names, as many as there would be
+    const v = (node as Node).args.value ?? 1;
+    return Array.from({ length: Number.isInteger(v) && v <= 3 ? v : 1 }, () => "");
+  });
+  /** Label of a subexercise: "a)", "b)" … per exercise (starred ones count too). */
+  engine.addFunction("taskLabel", ({ node }) => taskLabel(node as Node) ?? null);
+  /** Running number of an exercise: Sum-Points-<number>. */
+  engine.addFunction("exerciseNumber", ({ node }) => exerciseNumber(node as Node) ?? null);
+  /** Grading scale of the exam: { labels, indices, percentages } as comma lists. */
+  engine.addFunction("gradeScale", ({ node }) => {
+    const g = gradeScale(node as Node);
+    return { labels: g["data-grade-labels"], indices: g["data-grade-indices"], percentages: g["data-grade-percentages"] };
+  });
+  /** style value for lengths from the document: cssVars(width=…) → "--width: …"; null without any. */
+  engine.addFunction("cssVars", (args) => vars(args as Record<string, string | undefined>) ?? null);
+  engine.addFunction("katexOptions", ({ node }) => katexOptions(node as Node));
+  /** rows of a table with their cells (src/shared/edox/table.ts) */
+  engine.addFunction("tableLayout", ({ args }) => tableLayout(args as Record<string, any>));
+  engine.addGlobal("katexUrl", KATEX);
+
+  const errors: TemplateError[] = [];
+  for (const [name, source] of Object.entries(templates)) errors.push(...engine.addTemplate(name, source));
+  return { engine, errors };
+}
+
+/**
+ * Renders the exam `doc` as HTML: base.html (the exam with name field and buttons),
+ * app.html (without them) or page.html (standalone page; `stylesheet` and `script`
+ * are the files it links).
+ */
+export function renderHtmlTemplate(
+  doc: Node,
+  engine: TemplateEngine,
+  { template = "base.html", stylesheet = "style.css", script = "grading.js" } = {},
+): RenderResult {
+  assignFieldNames(doc);
+  return engine.render(template, { node: doc, stylesheet, script });
+}

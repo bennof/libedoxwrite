@@ -1,0 +1,19 @@
+{# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #}
+{# Standalone page: the exam, its style sheet and script, KaTeX with the exam's macros. #}
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if node.args.examName and node.args.title %}{{ node.args.examName }} – {{ node.args.title }}{% elif node.args.examName %}{{ node.args.examName }}{% elif node.args.title %}{{ node.args.title }}{% endif %}</title>
+<link rel="stylesheet" href="{{ stylesheet }}">
+<script defer src="{{ script }}"></script>
+<link rel="stylesheet" href="{{ katexUrl }}/katex.min.css">
+<script>window.katexOptions = {{ katexOptions(node=node) | json | replace(from="<", to="\\u003c") | safe }};</script>
+<script defer src="{{ katexUrl }}/katex.min.js"></script>
+<script defer src="{{ katexUrl }}/contrib/auto-render.min.js" onload="renderMathInElement(document.body, window.katexOptions)"></script>
+</head>
+<body>
+{# the output tag keeps the line, so the newline after the exam stays #}
+{% include "base.html" %}{{ "\n" }}</body>
+</html>

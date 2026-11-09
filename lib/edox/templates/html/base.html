@@ -1,0 +1,25 @@
+{# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #}
+{# The exam as an HTML fragment: form with header, blocks and grading footer.
+   app.html and page.html build on it. Field names must match the PDF. #}
+{% set max = node.args.totalPoints | default(value=node.args.points) %}
+{% set scale = gradeScale(node=node) %}
+<form id="exam-form" autocomplete="off">
+<article data-type="exam"{% if node.args.kind != null %} data-kind="{{ node.args.kind }}"{% endif %}{% if max != null %} data-points="{{ max }}"{% endif %}{% if node.args.examName != null %} data-exam-name="{{ node.args.examName }}"{% endif %}{% if node.args.title != null %} data-title="{{ node.args.title }}"{% endif %}{% if node.args.date != null %} data-date="{{ node.args.date }}"{% endif %} data-grade-labels="{{ scale.labels }}" data-grade-indices="{{ scale.indices }}" data-grade-percentages="{{ scale.percentages }}">
+<header>
+{% if node.args.examName %}<span data-type="examname">{{ node.args.examName }}</span>
+{% endif %}{% if node.args.title %}<h1>{{ components.helpers.title(node=node) }}</h1>
+{% endif %}{% if node.args.date %}<span data-type="date">{{ node.args.date }}</span>
+{% endif %}{% block namefield %}<label data-type="name">Name <input type="text" id="Name" name="Name"></label>{% endblock %}
+</header>
+{{ components.helpers.join(nodes=node.children) }}
+{% if node.args.kind != "worksheet" %}
+<footer data-type="grading">
+<label data-type="total">Summe <input type="text" id="SumPointsTotal" name="SumPointsTotal" inputmode="decimal" size="3">{% if max %}<span data-type="max">/{{ max }}</span>{% endif %}</label>
+<label data-type="grade">Note <input type="text" id="Grade" name="Grade" size="28"></label>
+<label data-type="checkdate">Datum <input type="text" id="CheckDate" name="CheckDate"></label>
+<label data-type="signature">Lehrkraft <input type="text" id="Signature" name="Signature"></label>{% block actions %}
+<span data-type="actions"><button type="button" data-action="download">JSON herunterladen</button><button type="button" data-action="load">JSON laden</button><input type="file" accept="application/json,.json" data-action="load-file" hidden></span>{% endblock %}
+</footer>
+{% endif %}
+</article>
+</form>

@@ -19,6 +19,9 @@ export type { Node, NodeJson } from "./edox/node.ts";
 export { parseMarkdown, toMarkdown } from "./edox/markdown/index.ts";
 export { texToExam, texToFlap } from "./edox/parser/texparser.ts";
 export { createTexEngine, renderTexTemplate } from "./edox/renderer/rendertemplate.ts";
+export { createHtmlEngine, renderHtmlTemplate } from "./edox/renderer/rendertemplate.ts";
+export { renderHtml, renderHtmlDocument, katexOptions, KATEX } from "./edox/renderer/renderhtml.ts";
+export { classicScript, companionFiles } from "./edox/html/standalone.ts";
 
 export type Format = "tex" | "json" | "md";
 export type Diagnostic = {

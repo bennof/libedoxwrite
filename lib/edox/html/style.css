@@ -1,0 +1,237 @@
+/*
+ * Styles for HTML rendered by renderhtml.ts.
+ * Elements are addressed by data-type; lengths from the exam arrive as
+ * custom properties (--width, --height, --size, --gap).
+ */
+
+:root {
+  /* highlight colours; besides them only grey, white and black */
+  --color-1: #2E86B8; /* blue: checkboxes, current field */
+  --color-2: #86C63F; /* green: solutions */
+  --color-3: #C92CB2; /* magenta: invalid input, placeholders */
+  --color-4: #d3b439; /* ochre: hints */
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 48rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+
+[data-new-page] {
+  break-before: page;
+}
+
+[data-type="pagebreak"] {
+  break-after: page;
+}
+
+/* structure */
+
+[data-type="exercise"] {
+  margin: 1.5rem 0;
+}
+
+[data-type="task"] {
+  margin: 0.75rem 0;
+}
+
+/* \subexercise[0.45\hsize]: side by side */
+[data-type="task"][data-width] {
+  display: inline-block;
+  vertical-align: top;
+  width: var(--width);
+}
+
+[data-type="solution"] {
+  border-left: 3px solid var(--color-2);
+  padding-left: 0.75rem;
+  color: #3a3a37;
+}
+
+/* \pp: checkboxes (<= 3 points) or a small text field */
+[data-type="points"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15em;
+  margin-left: 0.4em;
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+
+[data-type="points"] input[type="checkbox"] {
+  margin: 0;
+  accent-color: var(--color-1);
+}
+
+[data-type="points"] input[type="text"] {
+  width: 2.5em;
+  padding: 0 0.2em;
+  font: inherit;
+  text-align: right;
+}
+
+/* layout */
+
+[data-type="vspace"] {
+  height: var(--size);
+}
+
+[data-type="center"],
+[data-type="figure"] {
+  text-align: center;
+}
+
+[data-type="figure"] {
+  margin: 1rem 0;
+}
+
+[data-type="spread"] {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* writing space */
+
+[data-type="blank"] {
+  display: inline-block;
+  width: var(--width);
+  border-bottom: 1px solid;
+}
+
+[data-type="signatureline"] {
+  display: flex;
+  gap: 0.5em;
+}
+
+[data-type="signatureline"] > [data-type="line"] {
+  flex: 1;
+  margin-left: var(--gap, 0);
+  border-bottom: 1px solid;
+}
+
+[data-type="answerspace"] {
+  min-height: var(--height);
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+}
+
+[data-type="answerspace"][data-kind="mathbox"] {
+  background-image:
+    linear-gradient(#ddd 1px, transparent 1px),
+    linear-gradient(90deg, #ddd 1px, transparent 1px);
+  background-size: 0.5cm 0.5cm;
+}
+
+/* not rendered yet */
+
+[data-type="tikz"] {
+  display: inline-block;
+  padding: 1rem;
+  border: 1px dashed var(--color-3);
+  color: var(--color-3);
+}
+
+/* grading fields (names match the PDF form) */
+
+[data-type="exercise"] > [data-type="sum"] {
+  display: block;
+  text-align: right;
+  font-size: 0.85em;
+}
+
+[data-type="sum"] input,
+[data-type="grading"] input,
+[data-type="name"] input {
+  font: inherit;
+}
+
+[data-type="sum"] input {
+  width: 2.5em;
+  text-align: right;
+}
+
+[data-type="grading"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+[data-type="total"] input {
+  width: 3em;
+  text-align: right;
+}
+
+[data-type="grade"] input {
+  width: 16em;
+}
+
+[data-type="points"] input[data-invalid] {
+  outline: 2px solid var(--color-3);
+}
+
+[data-type="sum"] input[readonly],
+#SumPointsTotal[readonly],
+#Grade[readonly] {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+}
+
+/* current points field (keyboard grading) */
+[data-type="points"] input:focus,
+[data-type="points"] input[data-current] {
+  outline: 2px solid var(--color-1);
+  outline-offset: 1px;
+}
+
+[data-type="actions"] {
+  display: flex;
+  gap: 0.5rem;
+}
+
+[data-action="download"],
+[data-action="load"] {
+  font: inherit;
+  padding: 0.3em 0.9em;
+  cursor: pointer;
+}
+
+/* subexercise label a), b) … in a hanging indent, level with the first line, as in the class */
+[data-type="task"]:has(> [data-type="label"]) { position: relative; padding-left: 1.8em; }
+[data-type="task"] > [data-type="label"] { position: absolute; left: 0; top: 0; font-weight: 600; font-style: italic; }
+[data-type="task"] > [data-type="label"] + * { margin-top: 0; }
+
+[data-type="table"] {
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+}
+[data-type="table"][data-center] {
+  margin-inline: auto;
+}
+[data-type="table"] td {
+  /* --stretch: row height factor (\arraystretch), --space: extra space after a row (\\[…]) */
+  --pad: calc(0.15rem + (var(--stretch, 1) - 1) * 0.5em);
+  padding: var(--pad) 0.5rem calc(var(--pad) + var(--space, 0pt));
+  vertical-align: top;
+}
+[data-type="table"][data-compact] td:first-child {
+  padding-left: 0;
+}
+[data-type="table"][data-rules="grid"] td {
+  border: 1px solid;
+}
+[data-type="table"] td[data-align="center"] {
+  text-align: center;
+}
+[data-type="table"] td[data-align="right"] {
+  text-align: right;
+}
+[data-type="table"] td[data-width] {
+  width: var(--width);
+}

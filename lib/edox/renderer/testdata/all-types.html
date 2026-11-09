@@ -1,0 +1,60 @@
+<form id="exam-form" autocomplete="off">
+<article data-type="exam" data-points="7" data-exam-name="Test" data-date="21.10.2026" data-grade-labels="1+,1,1-,2+,2,2-,3+,3,3-,4+,4,4-,5+,5,5-,6" data-grade-indices="15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0" data-grade-percentages="95,90,85,80,75,70,65,60,55,50,45,40,33,27,20,0">
+<header>
+<span data-type="examname">Test</span>
+<span data-type="date">21.10.2026</span>
+<label data-type="name">Name <input type="text" id="Name" name="Name"></label>
+</header>
+<section data-type="section" data-id="A" data-new-page>
+<h2>Teil A &amp; B</h2>
+<div data-type="exercise" data-number="1" data-starred>
+<h3>Aufgabe 1</h3>
+<div data-type="task" data-new-page data-width style="--width: 50%">
+<span data-type="label">a)</span>
+<p>Rechne <span data-type="math">\(x_1 + 50\%\)</span> aus.<span data-type="points" data-value="2"><input type="checkbox" id="points-1-1-1" name="points-1-1-1"><input type="checkbox" id="points-1-1-2" name="points-1-1-2"></span></p>
+<div data-type="displaymath">\[a^2 + b^2 = c^2\]</div>
+<div data-type="displaymath">\begin{align*}x &amp;= 1\\
+y &amp;= 2\end{align*}</div>
+<div data-type="solution">
+<p>inline</p>
+</div>
+<div data-type="solution">
+<p>block</p>
+<div data-type="vspace" style="--size: 1cm"></div>
+</div>
+</div>
+<div data-type="task" data-starred>
+<p>(i) erster Teil</p>
+<p>weiter</p>
+<p>(ii)</p>
+<div data-type="displaymath">\[1\]</div>
+</div>
+<label data-type="sum"><input type="text" id="Sum-Points-1" name="Sum-Points-1" inputmode="decimal" size="2"></label>
+</div>
+<div data-type="exercise" data-number="2">
+<ol>
+<li><p>eins</p></li>
+<li><p>zwei</p></li>
+</ol>
+<ul>
+<li><p>Punkt</p></li>
+</ul>
+<figure data-type="figure">
+<div data-type="tikz" code="\draw (0,0) -- (1,1);" options="scale=2"> missing tikz </div>
+<div data-type="tikz" code="\fill (0,0) circle (1pt);"> missing tikz </div>
+</figure>
+<div data-type="answerspace" data-kind="answerbox" style="--height: 3"></div>
+<p><p data-type="hint"><em>Tipp</em></p><strong>fett</strong><em>schräg</em><div data-type="underline">unten</div><br> <code data-type="raw">\hfill</code>Text $ { } \ ~ ^ – — €  x<div data-type="textit">eigen</div><div data-type="relax"></div></p>
+<p><span data-type="points" data-value="1"><input type="checkbox" id="points-2-0-1" name="points-2-0-1"></span>Punkt<span data-type="points" data-value="1"><input type="checkbox" id="points-2-0-2" name="points-2-0-2"></span>[x]<code data-type="raw">\foo</code>*<span data-type="points" data-value="1"><input type="checkbox" id="points-2-0-3" name="points-2-0-3"></span><span data-type="math">\(y\)</span></p>
+<label data-type="sum"><input type="text" id="Sum-Points-2" name="Sum-Points-2" inputmode="decimal" size="2"></label>
+</div>
+</section>
+<footer data-type="grading">
+<label data-type="total">Summe <input type="text" id="SumPointsTotal" name="SumPointsTotal" inputmode="decimal" size="3"><span data-type="max">/7</span></label>
+<label data-type="grade">Note <input type="text" id="Grade" name="Grade" size="28"></label>
+<label data-type="checkdate">Datum <input type="text" id="CheckDate" name="CheckDate"></label>
+<label data-type="signature">Lehrkraft <input type="text" id="Signature" name="Signature"></label>
+<span data-type="actions"><button type="button" data-action="download">JSON herunterladen</button><button type="button" data-action="load">JSON laden</button><input type="file" accept="application/json,.json" data-action="load-file" hidden></span>
+</footer>
+</article>
+</form>

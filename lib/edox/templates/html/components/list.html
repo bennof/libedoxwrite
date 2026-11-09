@@ -1,0 +1,10 @@
+{# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #}
+{% component components.list(node: object) %}
+{% set tag = "ul" %}
+{% if node.args.ordered %}
+{% set tag = "ol" %}
+{% endif %}
+<{{ tag }}>
+{{ components.helpers.join(nodes=node.children) }}
+</{{ tag }}>
+{%- endcomponent %}

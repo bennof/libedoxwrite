@@ -1,0 +1,5 @@
+{# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #}
+{% component components.answerspace(node: object) %}
+{% set style = cssVars(height=node.args.height) %}
+<div data-type="answerspace"{% if node.args.kind != null %} data-kind="{{ node.args.kind }}"{% endif %}{% if style %} style="{{ style }}"{% endif %}></div>
+{%- endcomponent %}

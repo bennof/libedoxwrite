@@ -1,0 +1,9 @@
+{# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #}
+{# A table: args.rows[row][cell] holds the inline nodes of each cell, layout from tableLayout (src/shared/edox/table.ts). #}
+{% component components.table(node: object) %}
+<table data-type="table"{% if node.args.rules == "grid" %} data-rules="grid"{% endif %}{% if node.args.compact %} data-compact{% endif %}{% if node.args.center %} data-center{% endif %}{% if node.args.stretch != null %} style="--stretch: {{ node.args.stretch }}"{% endif %}>
+{% for row in tableLayout(args=node.args) %}
+<tr{% if row.space != "" %} style="{{ cssVars(space=row.space) }}"{% endif %}>{% for cell in row.cells %}<td{% if cell.span != null %} colspan="{{ cell.span }}"{% endif %}{% if cell.align != "left" %} data-align="{{ cell.align }}"{% endif %}{% if cell.width != null %} data-width style="{{ cssVars(width=cell.width) }}"{% endif %}>{{ components.helpers.inline(nodes=cell.nodes) }}</td>{% endfor %}</tr>
+{% endfor %}
+</table>
+{%- endcomponent %}

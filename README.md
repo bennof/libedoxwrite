@@ -2,7 +2,7 @@
 
 A TypeScript library and command-line tool for converting edox TeX documents, JSON document trees, and edox Markdown. It supports all nine combinations of these three formats, with diagnostics and partial recovery for malformed input.
 
-This is an experimental converter for edox documents, not a general-purpose LaTeX converter. It does not compile PDFs or render HTML. Generated TeX uses the external edox document classes.
+This is an experimental converter for edox documents, not a general-purpose LaTeX converter. It does not compile PDFs. HTML (exam pages for grading in the browser) is available through the library API (`createHtmlEngine`, `renderHtmlTemplate`), not through the CLI. Generated TeX uses the external edox document classes.
 
 ## Requirements and setup
 

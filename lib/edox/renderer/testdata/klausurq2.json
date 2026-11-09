@@ -1,0 +1,5139 @@
+{
+  "type": "exam",
+  "args": {
+    "format": "exam_q-phase",
+    "timePartA": 35,
+    "timePartB": 55,
+    "examName": "Klausur 1",
+    "pointsName": "BE",
+    "macros": [
+      {
+        "name": "vect",
+        "body": "\\begin{pmatrix} #1 \\\\ #2 \\\\ #3 \\end{pmatrix}",
+        "args": 3
+      }
+    ],
+    "date": "",
+    "title": "Mathematik Q2 GK",
+    "totalPoints": 100,
+    "points": 100
+  },
+  "children": [
+    {
+      "type": "section",
+      "args": {
+        "id": "AP",
+        "title": "Prüfungsteil A: Pflichtteil P",
+        "newPage": true,
+        "points": 15
+      },
+      "children": [
+        {
+          "type": "vspace",
+          "args": {
+            "size": "10pt"
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "bold",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Bearbeiten Sie alle drei Aufgaben, eine Auswahl ist nicht vorgesehen."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "vspace",
+          "args": {
+            "size": "10pt"
+          }
+        },
+        {
+          "type": "exercise",
+          "args": {
+            "title": "Aufgabe P1",
+            "starred": true,
+            "points": 5
+          },
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Gegeben ist die Funktion "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "f"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " mit "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "f(x)=3x^2+3x-6"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Zeigen Sie rechnerisch, dass "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "x=1"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "x=-2"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " die einzigen Nullstellen von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " sind."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "3x^2+3x-6=0 \\;|:3\\; \\Rightarrow\\; x^2+x-2=0"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "x_{1,2}=-\\frac12\\pm\\sqrt{\\frac14+2}=-\\frac12\\pm\\frac32"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "x_1=1,\\qquad x_2=-2"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Da eine quadratische Gleichung höchstens zwei Lösungen besitzt, sind dies die einzigen Nullstellen."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 3
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Berechnen Sie den Inhalt der Fläche, die die Funktion "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " mit der "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "x"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "-Achse einschließt."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Da die Parabel nach oben geöffnet ist und zwischen den Nullstellen unterhalb der "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "-Achse verläuft:"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "A=-\\int_{-2}^{1}\\left(3x^2+3x-6\\right)\\,dx=-\\left[x^3+\\frac32x^2-6x\\right]_{-2}^{1}"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "=-\\left(\\left(1+\\frac32-6\\right)-\\left(-8+6+12\\right)\\right)=-\\left(-\\frac72-10\\right)=\\frac{27}{2}"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "A=\\frac{27}{2}=13{,}5\\ \\text{FE}"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 3
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "vspace",
+          "args": {
+            "size": "8pt"
+          }
+        },
+        {
+          "type": "exercise",
+          "args": {
+            "title": "Aufgabe P2",
+            "starred": true,
+            "points": 5
+          },
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Gegeben ist die Ebene"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "displaymath",
+              "args": {
+                "tex": "E:\\;\\vec x=\\vect342+r\\cdot\\vect130+s\\cdot\\vect{-1}43."
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Bestimmen Sie einen Normalenvektor der Ebene "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "E"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " durch Ausprobieren mithilfe des Skalarprodukts. Der Normalenvektor ist senkrecht zu beiden Richtungsvektoren."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "hint",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Hinweis: Wenn Sie keine Idee haben, nutzen Sie den Normalenvektor "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "\\vect{4{,}5}{-1{,}5}{3{,}5}"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Der gesuchte Normalenvektor "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\vec n=\\vect{n_1}{n_2}{n_3}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " steht senkrecht auf beiden Richtungsvektoren, das Skalarprodukt mit beiden ist also jeweils "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "0"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ":"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\vec n\\cdot\\vect130=0:\\;\\; n_1+3n_2=0 \\qquad\\qquad \\vec n\\cdot\\vect{-1}43=0:\\;\\; -n_1+4n_2+3n_3=0"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Aus der ersten Gleichung: "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "n_1=-3n_2"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ". Eingesetzt in die zweite Gleichung:"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "3n_2+4n_2+3n_3=0 \\;\\Longrightarrow\\; 7n_2+3n_3=0"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Durch Ausprobieren: Mit "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "n_2=-3"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " ergibt sich "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "n_3=7"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " und damit "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "n_1=9"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\vec n=\\vect9{-3}7"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 3
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Prüfen Sie, ob der Punkt "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "R(1|-2|0)"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " auf der Ebene liegt."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Gleichsetzen von Punkt und Ebenengleichung:"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\vect1{-2}0=\\vect342+r\\cdot\\vect130+s\\cdot\\vect{-1}43"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "liefert das Gleichungssystem"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\text{I:}\\; 1=3+r-s \\qquad \\text{II:}\\; -2=4+3r+4s \\qquad \\text{III:}\\; 0=2+3s"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Aus III: "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "s=-\\dfrac23"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ". Eingesetzt in I: "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "r=s-2=-\\dfrac83"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Probe in II: "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "3r+4s=3\\cdot\\left(-\\dfrac83\\right)+4\\cdot\\left(-\\dfrac23\\right)=-8-\\dfrac83=-\\dfrac{32}{3}\\neq-6"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Da Gleichung II nicht erfüllt ist, besitzt das System keine Lösung "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "(r,s)"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ". "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "R"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " liegt "
+                          }
+                        },
+                        {
+                          "type": "bold",
+                          "children": [
+                            {
+                              "type": "text",
+                              "args": {
+                                "value": "nicht"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " auf "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "E"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 3
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "vspace",
+          "args": {
+            "size": "8pt"
+          }
+        },
+        {
+          "type": "exercise",
+          "args": {
+            "title": "Aufgabe P3",
+            "starred": true,
+            "points": 5
+          },
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Untersuchen Sie, wie die Geraden "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "g"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " und "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "h"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " zueinander liegen. Berechnen Sie ggf. die Koordinaten des Schnittpunkts."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "displaymath",
+              "args": {
+                "tex": "g:\\;\\vec x=\\vect314+r\\cdot\\vect1{-1}{-3};\\qquad h:\\;\\vec x=\\vect2{-1}6+s\\cdot\\vect{-3}39"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Untersuchen Sie zunächst die Richtungsvektoren."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\vect{-3}39=-3\\cdot\\vect1{-1}{-3}"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Die Richtungsvektoren sind Vielfache voneinander – "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "g"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " und "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "h"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " sind "
+                          }
+                        },
+                        {
+                          "type": "bold",
+                          "children": [
+                            {
+                              "type": "text",
+                              "args": {
+                                "value": "parallel"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " (identisch oder echt parallel)."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 3
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Entscheiden Sie, ob "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "g"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "h"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " identisch oder echt parallel sind."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Prüfen, ob der Stützpunkt von "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "h"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "(2|-1|6)"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", auf "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "g"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " liegt:"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\begin{array}{rll}\n3+r=2 &\\Rightarrow& r=-1\\\\\n1-r=-1 &\\Rightarrow& r=2\\\\\n4-3r=6 &\\Rightarrow& r=-\\dfrac23\n\\end{array}"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Die Werte für "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "r"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " stimmen nicht überein – der Punkt liegt nicht auf "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "g"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ". Die Geraden sind also "
+                          }
+                        },
+                        {
+                          "type": "bold",
+                          "children": [
+                            {
+                              "type": "text",
+                              "args": {
+                                "value": "echt parallel"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " und besitzen keinen Schnittpunkt."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 3
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "args": {
+        "id": "AW",
+        "title": "Prüfungsteil A: Wahlpflichtteil W",
+        "newPage": true,
+        "choice": {
+          "select": 2
+        },
+        "points": 10
+      },
+      "children": [
+        {
+          "type": "vspace",
+          "args": {
+            "size": "10pt"
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "bold",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Wählen Sie zwei der insgesamt vier Aufgaben aus und bearbeiten diese."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "vspace",
+          "args": {
+            "size": "10pt"
+          }
+        },
+        {
+          "type": "exercise",
+          "args": {
+            "title": "Aufgabe W1",
+            "starred": true,
+            "points": 5
+          },
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Gegeben ist die Funktion "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "g"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " mit "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "g(x)=e^{-2x}+2x"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": ". Berechnen Sie die Extrempunkte von "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "g"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "solution",
+              "children": [
+                {
+                  "type": "displaymath",
+                  "args": {
+                    "tex": "g'(x)=-2e^{-2x}+2"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Notwendige Bedingung: "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "g'(x)=0 \\Rightarrow e^{-2x}=1 \\Rightarrow x=0"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "displaymath",
+                  "args": {
+                    "tex": "g''(x)=4e^{-2x},\\qquad g''(0)=4>0 \\;\\Rightarrow\\; \\text{Tiefpunkt}"
+                  }
+                },
+                {
+                  "type": "displaymath",
+                  "args": {
+                    "tex": "g(0)=1"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Tiefpunkt "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "\\text{TP}(0|1)"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 3
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "vspace",
+          "args": {
+            "size": "8pt"
+          }
+        },
+        {
+          "type": "exercise",
+          "args": {
+            "title": "Aufgabe W2",
+            "starred": true,
+            "points": 5
+          },
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Gegeben ist die Funktion "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "f"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " mit "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "f(x)=(3x^2+6)e^{-0{,}5x}"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 3
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Bestimmen Sie unter Anwendung der Ableitungsregeln die erste Ableitung von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "hint",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Zur Kontrolle: "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f'(x)=(-1{,}5x^2+6x-3)e^{-0{,}5x}"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Produktregel mit "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "u(x)=3x^2+6"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "v(x)=e^{-0{,}5x}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ":"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "f'(x)=6x\\cdot e^{-0{,}5x}+(3x^2+6)\\cdot(-0{,}5)e^{-0{,}5x}"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "f'(x)=\\left(6x-1{,}5x^2-3\\right)e^{-0{,}5x}=\\left(-1{,}5x^2+6x-3\\right)e^{-0{,}5x}"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 3
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Bestimmen Sie die Gleichung der Tangente an den Graphen von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " an der Stelle "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "x=0"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "f(0)=6,\\qquad f'(0)=-3"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Tangente: "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "y=-3x+6"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "vspace",
+          "args": {
+            "size": "8pt"
+          }
+        },
+        {
+          "type": "exercise",
+          "args": {
+            "title": "Aufgabe W3",
+            "starred": true,
+            "points": 5
+          },
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Bestimmen Sie unter vollständiger Angabe des Lösungswegs die Lösung des linearen Gleichungssystems."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "displaymath",
+              "args": {
+                "tex": "\\begin{array}{rcrcrcr}\n\\text{I}&&6x_1-2x_2+6x_3&=&-34\\\\\n\\text{II}&&2x_1-x_2-x_3&=&-8\\\\\n\\text{III}&&2x_1-2x_2+6x_3&=&-14\n\\end{array}"
+              }
+            },
+            {
+              "type": "solution",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "\\text{I}-3\\cdot\\text{II}"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ":"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "displaymath",
+                  "args": {
+                    "tex": "6x_1-2x_2+6x_3-\\left(6x_1-3x_2-3x_3\\right)=-34-(-24)"
+                  }
+                },
+                {
+                  "type": "displaymath",
+                  "args": {
+                    "tex": "x_2+9x_3=-10 \\quad(\\text{IV})"
+                  }
+                },
+                {
+                  "type": "points",
+                  "args": {
+                    "value": 1
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "\\text{I}-3\\cdot\\text{III}"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ":"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "displaymath",
+                  "args": {
+                    "tex": "6x_1-2x_2+6x_3-\\left(6x_1-6x_2+18x_3\\right)=-34-(-42)"
+                  }
+                },
+                {
+                  "type": "displaymath",
+                  "args": {
+                    "tex": "4x_2-12x_3=8 \\quad\\Rightarrow\\quad x_2-3x_3=2 \\quad(\\text{V})"
+                  }
+                },
+                {
+                  "type": "points",
+                  "args": {
+                    "value": 1
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "\\text{IV}-\\text{V}"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ": "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "12x_3=-12 \\Rightarrow x_3=-1"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Einsetzen in (V): "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "x_2-3\\cdot(-1)=2 \\Rightarrow x_2=-1"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Einsetzen in I: "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "6x_1-2\\cdot(-1)+6\\cdot(-1)=-34 \\Rightarrow 6x_1-4=-34 \\Rightarrow x_1=-5"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "displaymath",
+                  "args": {
+                    "tex": "L=\\{(-5;-1;-1)\\}"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "vspace",
+          "args": {
+            "size": "8pt"
+          }
+        },
+        {
+          "type": "exercise",
+          "args": {
+            "title": "Aufgabe W4",
+            "starred": true,
+            "points": 5
+          },
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Die Punkte "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "A(-4|3|2)"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": ", "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "B(2|1|-5)"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " und "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "C(5|3|-3)"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " bilden das Dreieck "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "ABC"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Zeigen Sie, dass das Dreieck am Punkt "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "B"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " einen rechten Winkel besitzt."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\overrightarrow{BA}=\\vect{-6}27,\\qquad \\overrightarrow{BC}=\\vect32{2}"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\overrightarrow{BA}\\cdot\\overrightarrow{BC}=-18+4+14=0"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Da das Skalarprodukt "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "0"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " ist, stehen "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\overrightarrow{BA}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " und "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\overrightarrow{BC}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " senkrecht aufeinander – rechter Winkel bei "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "B"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 1
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Bestimmen Sie die Länge der Seite "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "AB"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\left|\\overrightarrow{AB}\\right|=\\sqrt{6^2+(-2)^2+(-7)^2}=\\sqrt{36+4+49}=\\sqrt{89}\\approx9{,}43"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Ermitteln Sie die Koordinaten eines Punktes "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "D"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ", sodass das Viereck "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "ABCD"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " ein Rechteck ist."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Da der rechte Winkel bei "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "B"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " liegt, muss "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "D=A+\\overrightarrow{BC}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " gelten:"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "D=\\vect{-4}32+\\vect322=\\vect{-1}{5}{4}"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "args": {
+        "id": "B",
+        "title": "Prüfungsteil B: Aufgaben mit Hilfsmitteln",
+        "newPage": true,
+        "points": 75
+      },
+      "children": [
+        {
+          "type": "vspace",
+          "args": {
+            "size": "10pt"
+          }
+        },
+        {
+          "type": "exercise",
+          "args": {
+            "title": "Aufgabe B1",
+            "starred": true,
+            "points": 40
+          },
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Gegeben ist die Funktion "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "f"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " mit"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "displaymath",
+              "args": {
+                "tex": "f(x)=-0{,}25\\cdot\\left(x^2-10x-40\\right)\\cdot e^{-0{,}2x}."
+              }
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Die Abbildung zeigt den Graphen der Funktion."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "figure",
+              "children": [
+                {
+                  "type": "tikz",
+                  "args": {
+                    "code": "\\begin{axis}[\n  width=11cm, height=6.5cm,\n  xmin=-5, xmax=27, ymin=-6, ymax=11,\n  axis lines=middle, grid=both, grid style={gray!25},\n  xlabel={$x$}, ylabel={$f(x)$},\n  samples=200, domain=-4.5:26.5,\n]\n\\addplot[thick, blue!70!black] {-0.25*(x^2-10*x-40)*exp(-0.2*x)};\n\\end{axis}"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 3
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Geben Sie das Verhalten von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " im Unendlichen in mathematisch korrekter Schreibweise an."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\lim_{x\\to\\infty}f(x)=0,\\qquad \\lim_{x\\to-\\infty}f(x)=-\\infty"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 3
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 3
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Bestimmen Sie rechnerisch die Koordinaten der Schnittpunkte von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " mit den Koordinatenachsen."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "y"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "-Achse: "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f(0)=-0{,}25\\cdot(-40)\\cdot1=10"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", also "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "(0|10)"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "-Achse: "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f(x)=0 \\Leftrightarrow x^2-10x-40=0"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " (da "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "e^{-0{,}2x}\\neq0"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "):"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "x_{1,2}=5\\pm\\sqrt{25+40}=5\\pm\\sqrt{65}"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "x_1\\approx-3{,}06,\\qquad x_2\\approx13{,}06"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 3
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Bestimmen Sie alle Werte von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "x"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ", für die gilt "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f(x)=7"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Mit dem CAS-Rechner (transzendente Gleichung):"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "x_1\\approx-1{,}72,\\qquad x_2\\approx4{,}16"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 3
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 3
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Geben Sie die ersten drei Ableitungen von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " an."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "f'(x)=\\frac{1}{20}\\left(x^2-20x+10\\right)e^{-0{,}2x}"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "f''(x)=\\frac{1}{100}\\left(-x^2+30x-110\\right)e^{-0{,}2x}"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "f'''(x)=\\frac{1}{500}\\left(x^2-40x+260\\right)e^{-0{,}2x}"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 3
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 7
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Berechnen Sie die Extrempunkte von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Notwendige Bedingung: "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f'(x)=0 \\Rightarrow x^2-20x+10=0 \\Rightarrow x=10\\pm3\\sqrt{10}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "x_1\\approx0{,}51,\\qquad x_2\\approx19{,}49"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 3
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f''(0{,}51)\\approx-0{,}86<0 \\Rightarrow"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " Hochpunkt "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\text{HP}(0{,}51|10{,}12)"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f''(19{,}49)\\approx0{,}02>0 \\Rightarrow"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " Tiefpunkt "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\text{TP}(19{,}49|-0{,}74)"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 4
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 6
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Bestimmen Sie rechnerisch die Wendepunkte von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Notwendige Bedingung: "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f''(x)=0 \\Rightarrow -x^2+30x-110=0 \\Rightarrow x=15\\pm\\sqrt{115}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "x_1\\approx4{,}28,\\qquad x_2\\approx25{,}72"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 3
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Da "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f'''(x_1)\\neq0"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " und "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f'''(x_2)\\neq0"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " liegen echte Wendepunkte vor:"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\text{W}_1(4{,}28|6{,}85),\\qquad \\text{W}_2(25{,}72|-0{,}53)"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 3
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 4
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Gegeben ist die Funktion "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "t"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " mit "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "t(x)=-0{,}61x+7{,}44"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ". Zeigen Sie durch eine Rechnung, dass "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "t"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " die Tangente an den Graphen von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " an der Stelle "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "x=10"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " ist."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "f(10)\\approx1{,}35,\\qquad f'(10)\\approx-0{,}61"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Tangente durch "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "(10|f(10))"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " mit Steigung "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f'(10)"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ":"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "y=-0{,}61(x-10)+1{,}35=-0{,}61x+7{,}44"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Das entspricht "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "t(x)"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 4
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 6
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(1) Zeigen Sie unter Anwendung der Ableitungsregeln, dass "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "F"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " mit "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "F(x)=(1{,}25x^2-50)e^{-0{,}2x}"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " eine Stammfunktion von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " ist."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(2) Berechnen Sie den Inhalt der Fläche, die der Graph von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " im ersten Quadranten mit der "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "y"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "-Achse und der "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "x"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "-Achse einschließt."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(1) Produktregel:"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "F'(x)=2{,}5x\\cdot e^{-0{,}2x}+\\left(1{,}25x^2-50\\right)\\cdot(-0{,}2)e^{-0{,}2x}"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "=\\left(2{,}5x-0{,}25x^2+10\\right)e^{-0{,}2x}=-0{,}25\\left(x^2-10x-40\\right)e^{-0{,}2x}=f(x)"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 3
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(2) Die Fläche wird von "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x=0"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " bis zur positiven Nullstelle "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x=5+\\sqrt{65}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " begrenzt:"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "A=F\\left(5+\\sqrt{65}\\right)-F(0)\\approx11{,}98-(-50)=61{,}98"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Die Fläche beträgt etwa "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "A\\approx61{,}98"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " FE."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 3
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 5
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Die Punkte "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "A(0|0)"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ", "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "B(u|0)"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ", "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "C(0|f(u))"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "D(u|f(u))"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " bilden für "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "0<u<13"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " die Eckpunkte eines Rechtecks "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "ABCD"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(1) Skizzieren Sie das Rechteck für "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "u=6"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " in obiger Abbildung."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(2) Der Wert von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "u"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " soll so gewählt werden, dass der Flächeninhalt des Rechtecks "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "ABCD"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " maximal wird. Stellen Sie eine geeignete Funktion zur Ermittlung des gesuchten Werts auf und geben Sie mit Hilfe des CAS-Rechners den gesuchten Wert von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "u"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " sowie den zugehörigen Flächeninhalt "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "A"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " an."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(1) "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f(6)\\approx4{,}82"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", das Rechteck reicht von "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "(0|0)"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " bis "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "(6|4{,}82)"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(2) Flächenfunktion: "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "A(u)=u\\cdot f(u)"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Mit dem CAS-Rechner: "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "A'(u)=0"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " für "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "u=5"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " (im Intervall "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "0<u<13"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ")."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "A(5)=5\\cdot f(5)\\approx29{,}89"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Der Flächeninhalt wird für "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "u=5"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " mit "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "A\\approx29{,}89"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " FE maximal."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 4
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "args": {
+            "title": "Aufgabe B2",
+            "starred": true,
+            "newPage": true,
+            "points": 35
+          },
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Die Abbildung zeigt ein Prisma mit den Eckpunkten "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "A(3|4|-1)"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": ", "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "B(3|8|-1)"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": ", "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "C"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": ", "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "D"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": ", "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "E(0|4|1)"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " und "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "F(0|4|-1)"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": ". Die Punkte "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "G(0|8|0)"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " und "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "H(1{,}5|8|-1)"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " sind die Mittelpunkte der Seiten "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "CD"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " bzw."
+                  }
+                },
+                {
+                  "type": "ctrlspace"
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "BC"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "figure",
+              "children": [
+                {
+                  "type": "tikz",
+                  "args": {
+                    "options": "scale=1.05, line join=round",
+                    "code": "\\coordinate (A) at (2.939,-2.061);\n\\coordinate (B) at (6.939,-2.061);\n\\coordinate (C) at (8,-1);\n\\coordinate (D) at (8,1);\n\\coordinate (E) at (4,1);\n\\coordinate (F) at (4,-1);\n\\coordinate (G) at (8,0);\n\\coordinate (H) at (7.47,-1.53);\n\\coordinate (O) at (2.4,1.6);\n\n\\draw[thick] (A) -- (F) -- (E) -- cycle;\n\\draw[thick] (B) -- (C) -- (D) -- cycle;\n\\draw[thick] (A) -- (B);\n\\draw[thick] (F) -- (C);\n\\draw[thick] (E) -- (D);\n\n\\draw[->] (O) -- ++(-0.64,-0.64) node[below left]{\\small$x_1$};\n\\draw[->] (O) -- ++(0.9,0) node[right]{\\small$x_2$};\n\\draw[->] (O) -- ++(0,0.9) node[above]{\\small$x_3$};\n\n\\fill (A) circle (1.4pt) node[below left]{$A$};\n\\fill (B) circle (1.4pt) node[below right]{$B$};\n\\fill (C) circle (1.4pt) node[right]{$C$};\n\\fill (D) circle (1.4pt) node[right]{$D$};\n\\fill (E) circle (1.4pt) node[above]{$E$};\n\\fill (F) circle (1.4pt) node[below]{$F$};\n\\fill (G) circle (1.2pt) node[right]{$G$};\n\\fill (H) circle (1.2pt) node[below]{$H$};"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Geben Sie die Koordinaten der Punkte "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "C"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "D"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " an."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "H"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " ist Mittelpunkt von "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "BC"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ": "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "C=2H-B=\\vect3{16}{-2}-\\vect38{-1}=\\vect0{8}{-1}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "G"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " ist Mittelpunkt von "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "CD"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ": "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "D=2G-C=\\vect0{16}{0}-\\vect08{-1}=\\vect08{1}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 5
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(1) Weisen Sie durch eine Rechnung nach, dass die Fläche "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "ABCF"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " ein Rechteck ist."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(2) Bestimmen Sie den Flächeninhalt des Rechtecks "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "ABCF"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(1)"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\overrightarrow{AB}=\\vect040,\\qquad \\overrightarrow{AF}=\\vect{-3}00,\\qquad \\overrightarrow{BC}=\\vect{-3}00"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\overrightarrow{AB}\\cdot\\overrightarrow{AF}=0,\\qquad \\overrightarrow{BC}=\\overrightarrow{AF}"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\overrightarrow{AB}\\perp\\overrightarrow{AF}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " und "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\overrightarrow{BC}=\\overrightarrow{AF}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ": "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "ABCF"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " ist ein Rechteck."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 3
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(2)"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "A=\\left|\\overrightarrow{AB}\\right|\\cdot\\left|\\overrightarrow{AF}\\right|=4\\cdot3=12\\ \\text{FE}"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 3
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Berechnen Sie die Innenwinkel des Dreiecks "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "AFE"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\overrightarrow{FA}=\\vect300,\\qquad \\overrightarrow{FE}=\\vect002,\\qquad \\overrightarrow{AE}=\\vect{-3}02"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\overrightarrow{FA}\\cdot\\overrightarrow{FE}=0 \\;\\Rightarrow\\; \\text{Winkel bei }F=90^\\circ"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\cos(\\alpha)=\\frac{\\overrightarrow{AF}\\cdot\\overrightarrow{AE}}{|\\overrightarrow{AF}||\\overrightarrow{AE}|}=\\frac{9}{3\\cdot\\sqrt{13}} \\;\\Rightarrow\\; \\alpha\\approx33{,}69^\\circ \\text{ (bei }A\\text{)}"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\text{Winkel bei }E=180^\\circ-90^\\circ-33{,}69^\\circ\\approx56{,}31^\\circ"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 3
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "figure",
+              "children": [
+                {
+                  "type": "tikz",
+                  "args": {
+                    "options": "scale=1.05, line join=round",
+                    "code": "\\coordinate (A) at (2.939,-2.061);\n\\coordinate (B) at (6.939,-2.061);\n\\coordinate (C) at (8,-1);\n\\coordinate (D) at (8,1);\n\\coordinate (E) at (4,1);\n\\coordinate (F) at (4,-1);\n\\coordinate (G) at (8,0);\n\\coordinate (H) at (7.47,-1.53);\n\n\\draw[thick] (A) -- (F) -- (E) -- cycle;\n\\draw[thick] (B) -- (C) -- (D) -- cycle;\n\\draw[thick] (A) -- (B);\n\\draw[thick] (F) -- (C);\n\\draw[thick] (E) -- (D);\n\n\\draw[thick, red!70!black] (1.421,-2.679) -- (9.518,0.618) node[right]{$g$};\n\\draw[thick, teal] (2.959,1.759) -- (8.511,-2.289) node[below right]{$h$};\n\n\\fill (A) circle (1.4pt) node[below left]{$A$};\n\\fill (B) circle (1.4pt) node[below right]{$B$};\n\\fill (C) circle (1.4pt) node[right]{$C$};\n\\fill (D) circle (1.4pt) node[right]{$D$};\n\\fill (E) circle (1.4pt) node[above]{$E$};\n\\fill (F) circle (1.4pt) node[below]{$F$};\n\\fill (G) circle (1.2pt) node[above right]{$G$};\n\\fill (H) circle (1.2pt) node[below]{$H$};"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 5
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Die Gerade "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "h"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " verläuft durch die Punkte "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "E"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "H"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(1) Bestimmen Sie unter vollständiger Angabe des Lösungswegs eine Gleichung der Geraden "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "h"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "hint",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Hinweis: Wenn Sie die Geradengleichung nicht aufstellen können, verwenden Sie im Folgenden die Gleichung "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "h:\\;\\vec x=\\vect{-1{,}5}03+r\\cdot\\vect{-3}{-8}4"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(2) Prüfen Sie durch eine Rechnung, ob der Punkt "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "R(-3|-4|5)"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " auf der Geraden "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "h"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " liegt."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(1)"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\overrightarrow{EH}=H-E=\\vect{1{,}5}{4}{-2}"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "h:\\;\\vec x=\\vect041+r\\cdot\\vect{1{,}5}4{-2}"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 3
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(2)"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\vect041+r\\cdot\\vect{1{,}5}4{-2}=\\vect{-3}{-4}5 \\;\\Rightarrow\\; r=-2 \\text{ (in allen drei Zeilen konsistent)}"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "R"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " liegt auf "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "h"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 7
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Die Gerade "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "g:\\;\\vec x=\\vect34{-1}+r\\cdot\\vect{-1{,}5}{2}{0{,}5}"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " geht durch die Punkte "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "A"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "G"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ". Untersuchen Sie rechnerisch, welche Lage die Geraden "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "g"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "h"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " zueinander haben. Berechnen Sie ggf."
+                      }
+                    },
+                    {
+                      "type": "ctrlspace"
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "den Schnittpunkt und Schnittwinkel."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Die Richtungsvektoren sind nicht parallel (kein Vielfaches). Gleichsetzen:"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\vect34{-1}+r\\cdot\\vect{-1{,}5}2{0{,}5}=\\vect041+s\\cdot\\vect{1{,}5}4{-2}"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "liefert "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "r=\\frac43"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "s=\\frac23"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " (in allen drei Gleichungen konsistent)."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 3
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Die Geraden schneiden sich in"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\vect34{-1}+\\frac43\\cdot\\vect{-1{,}5}2{0{,}5}=\\vect{1}{\\frac{20}{3}}{-\\frac13}."
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Schnittwinkel über die Richtungsvektoren "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\vec u=\\vect{-1{,}5}2{0{,}5}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " und "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\vec v=\\vect{1{,}5}4{-2}"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ":"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\cos\\varphi=\\frac{|\\vec u\\cdot\\vec v|}{|\\vec u|\\cdot|\\vec v|}=\\frac{|-2{,}25+8-1|}{\\sqrt{6{,}5}\\cdot\\sqrt{22{,}25}}=\\frac{4{,}75}{\\sqrt{144{,}625}}\\approx0{,}395"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\varphi\\approx66{,}74^\\circ"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 13
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Die Punkte "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "A"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ", "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "F"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "E"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " liegen in der Ebene "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "E_1"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und die Punkte "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "A"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ", "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "B"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ", "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "D"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "E"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " liegen in der Ebene "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "E_2"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(1) Bestimmen Sie unter vollständiger Angabe des Lösungswegs eine Parametergleichung der Ebene "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "E_1"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "hint",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Hinweis: Wenn Sie die Gleichung nicht aufstellen können, verwenden Sie im Folgenden die Gleichung "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "E_1:\\;\\vec x=\\vect{-3}41+r\\cdot\\vect{-6}02+s\\cdot\\vect{1{,}5}01"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Gegeben sind der Punkt "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "S(3|2|1)"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und die Gerade "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "k:\\;\\vec x=\\vect040+t\\cdot\\vect{1{,}5}20"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(2) Prüfen Sie durch eine Rechnung, ob der Punkt "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "S"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " auf der Ebene "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "E_1"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " liegt."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(3) Bestimmen Sie den Schnittwinkel zwischen der Geraden "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "k"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und der Ebene "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "E_1"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(4) Untersuchen Sie mit Hilfe einer Rechnung, ob die Gerade "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "k"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " die Ebene "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "E_1"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " schneidet. Geben Sie ggf."
+                      }
+                    },
+                    {
+                      "type": "ctrlspace"
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "den Schnittpunkt an."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(1) "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "E_1"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " durch "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "A,F,E"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ": "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\overrightarrow{AF}=\\vect{-3}00"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\overrightarrow{AE}=\\vect{-3}02"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "E_1:\\;\\vec x=\\vect34{-1}+r\\cdot\\vect{-3}00+s\\cdot\\vect{-3}02"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Für später nützlich, ein Normalenvektor: "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\overrightarrow{AF}\\times\\overrightarrow{AE}=\\vect060"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", kurz "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\vec n=\\vect010"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 3
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(2) Punktprobe über den Normalenvektor: "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\overrightarrow{AS}=\\vect0{-2}2"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\overrightarrow{AS}\\cdot\\vec n=0\\cdot0+(-2)\\cdot1+2\\cdot0=-2\\neq0"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Also "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "S\\notin E_1"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(3) Für den Schnittwinkel wird der Richtungsvektor "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\vec u=\\vect{1{,}5}20"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " von "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "k"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " benötigt:"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\sin\\varphi=\\frac{|\\vec n\\cdot\\vec u|}{|\\vec n|\\cdot|\\vec u|}=\\frac{|0\\cdot1{,}5+1\\cdot2+0\\cdot0|}{1\\cdot\\sqrt{1{,}5^2+2^2}}=\\frac{2}{2{,}5}=0{,}8"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\varphi=\\arcsin(0{,}8)\\approx53{,}13^\\circ"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 3
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(4) Da "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\varphi\\neq0^\\circ"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", ist "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "k"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " nicht parallel zu "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "E_1"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " – die Gerade schneidet die Ebene in genau einem Punkt. Gleichsetzen:"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\vect040+t\\cdot\\vect{1{,}5}20=\\vect34{-1}+r\\cdot\\vect{-3}00+s\\cdot\\vect{-3}02"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "liefert aus der zweiten Gleichung "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "4+2t=4 \\Rightarrow t=0"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", aus der dritten "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "2s=1 \\Rightarrow s=0{,}5"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " und damit aus der ersten "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "r=0{,}5"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " (Probe: alle drei Gleichungen konsistent)."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\vec x=\\vect040"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Die Gerade "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "k"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " schneidet "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "E_1"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " im Punkt "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "(0|4|0)"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 5
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

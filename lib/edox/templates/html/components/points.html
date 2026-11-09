@@ -1,0 +1,7 @@
+{# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #}
+{# Up to 3 points: one checkbox per point, otherwise a small text field. #}
+{% component components.points(node: object) %}
+{% set v = node.args.value | default(value=1) %}
+{% set names = fieldNames(node=node) %}
+<span data-type="points" data-value="{{ v }}">{% if v <= 3 and v == v | int %}{% for name in names %}<input type="checkbox"{% if name %} id="{{ name }}" name="{{ name }}"{% endif %}>{% endfor %}{% else %}<input type="text"{% if names | first %} id="{{ names | first }}" name="{{ names | first }}"{% endif %} inputmode="decimal" size="2" data-max="{{ v }}"><span data-type="max">/{{ v }}</span>{% endif %}</span>
+{%- endcomponent %}

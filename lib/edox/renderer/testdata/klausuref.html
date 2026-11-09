@@ -1,0 +1,264 @@
+<form id="exam-form" autocomplete="off">
+<article data-type="exam" data-points="43" data-exam-name="Klausur 1" data-title="Mathematik EF GK" data-date="" data-grade-labels="1+,1,1-,2+,2,2-,3+,3,3-,4+,4,4-,5+,5,5-,6" data-grade-indices="15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0" data-grade-percentages="95,90,85,80,75,70,65,60,55,50,45,40,33,27,20,0">
+<header>
+<span data-type="examname">Klausur 1</span>
+<h1>Mathematik EF GK</h1>
+<label data-type="name">Name <input type="text" id="Name" name="Name"></label>
+</header>
+<section data-type="section" data-id="A" data-points="13">
+<h2>Prüfungsteil A: Aufgaben ohne Hilfsmittel</h2>
+<div data-type="vspace" style="--size: 10pt"></div>
+<p><strong>Hinweis:</strong> Für Prüfungsteil A sind außer Zeichengeräten keine Hilfsmittel zugelassen.</p>
+<div data-type="vspace" style="--size: 10pt"></div>
+<div data-type="exercise" data-number="1" data-starred data-points="7">
+<h3>Aufgabe 1</h3>
+<div data-type="task" data-points="3">
+<span data-type="label">a)</span>
+<p>Betrachten Sie die Zuordnung zwischen den Schülerinnen und Schülern einer Klasse und ihren Geburtsdaten.</p>
+<p>(i) Ist die Zuordnung <em>Schüler <span data-type="math">\(\to\)</span> Geburtsdatum</em> eine Funktion? Begründen Sie.</p>
+<p>(ii) Ist die Zuordnung <em>Geburtsdatum <span data-type="math">\(\to\)</span> Schüler</em> eine Funktion? Begründen Sie.</p>
+<div data-type="solution">
+<p>(i) Es liegt eine Funktion vor, da jeder Schüler genau ein Geburtsdatum besitzt.<span data-type="points" data-value="2"><input type="checkbox" id="points-1-1-1" name="points-1-1-1"><input type="checkbox" id="points-1-1-2" name="points-1-1-2"></span></p>
+<p>(ii) Es liegt <strong>keine</strong> Funktion vor: Haben zwei Schüler am selben Tag Geburtstag, wird diesem Geburtsdatum mehr als ein Schüler zugeordnet – die Zuordnung ist dann nicht eindeutig.<span data-type="points" data-value="1"><input type="checkbox" id="points-1-1-3" name="points-1-1-3"></span></p>
+</div>
+</div>
+<div data-type="task" data-points="1">
+<span data-type="label">b)</span>
+<p>Entscheiden Sie allein anhand der Exponenten, ob der Graph von</p>
+<div data-type="displaymath">\[f(x)=3x^4-x^2+5\]</div>
+<p>achsensymmetrisch zur <span data-type="math">\(y\)</span>-Achse, punktsymmetrisch zum Ursprung oder keins von beidem ist.</p>
+<div data-type="solution">
+<p>Nur gerade Exponenten <span data-type="math">\(\Rightarrow\)</span> achsensymmetrisch zur <span data-type="math">\(y\)</span>-Achse.<span data-type="points" data-value="1"><input type="checkbox" id="points-1-2-1" name="points-1-2-1"></span></p>
+</div>
+</div>
+<div data-type="task" data-points="2">
+<span data-type="label">c)</span>
+<p>Weisen Sie rechnerisch nach, ob der Graph von</p>
+<div data-type="displaymath">\[g(x)=-x^5+2x^3-x\]</div>
+<p>achsensymmetrisch zur <span data-type="math">\(y\)</span>-Achse oder punktsymmetrisch zum Ursprung ist.</p>
+<div data-type="solution">
+<div data-type="displaymath">\[g(-x)=-(-x)^5+2(-x)^3-(-x)=x^5-2x^3+x=-\left(-x^5+2x^3-x\right)=-g(x)\]</div>
+<p>Also ist der Graph punktsymmetrisch zum Ursprung.<span data-type="points" data-value="2"><input type="checkbox" id="points-1-3-1" name="points-1-3-1"><input type="checkbox" id="points-1-3-2" name="points-1-3-2"></span></p>
+</div>
+</div>
+<div data-type="task" data-points="1">
+<span data-type="label">d)</span>
+<p>Gegeben ist die Funktion <span data-type="math">\(f\)</span> mit</p>
+<div data-type="displaymath">\[f(x)=-x^3+4x.\]</div>
+<p>Eine der drei Abbildungen zeigt den Graphen von <span data-type="math">\(f\)</span>. Geben Sie die passende Abbildung an und begründen Sie Ihre Entscheidung mithilfe von Symmetrie und Randverhalten.</p>
+<figure data-type="figure">
+<div data-type="tikz" code="\begin{axis}[width=4.3cm,height=4.3cm,axis lines=middle,xmin=-2.8,xmax=2.8,ymin=-8,ymax=8,xtick=\empty,ytick=\empty,samples=100,domain=-2.6:2.6]
+\addplot[thick] {-x^3+4*x};
+\end{axis}
+\node at (2.15,3.9) {\textbf{A}};"> missing tikz </div>
+<div data-type="tikz" code="\begin{axis}[width=4.3cm,height=4.3cm,axis lines=middle,xmin=-2.8,xmax=2.8,ymin=-8,ymax=8,xtick=\empty,ytick=\empty,samples=100,domain=-2.6:2.6]
+\addplot[thick] {-0.3*x^4+2*x^2};
+\end{axis}
+\node at (2.15,3.9) {\textbf{B}};"> missing tikz </div>
+<div data-type="tikz" code="\begin{axis}[width=4.3cm,height=4.3cm,axis lines=middle,xmin=-2.8,xmax=2.8,ymin=-8,ymax=8,xtick=\empty,ytick=\empty,samples=100,domain=-2.6:2.6]
+\addplot[thick] {x^3-4*x};
+\end{axis}
+\node at (2.15,3.9) {\textbf{C}};"> missing tikz </div>
+</figure>
+<div data-type="solution">
+<p><span data-type="math">\(f\)</span> enthält nur ungerade Exponenten, ist also punktsymmetrisch zum Ursprung – das schließt Abbildung B (achsensymmetrisch) aus.</p>
+<p>Der führende Term von <span data-type="math">\(f\)</span> ist <span data-type="math">\(-x^3\)</span>, also negatives Vorzeichen bei ungeradem Grad <span data-type="math">\(3\)</span>: für <span data-type="math">\(x\to\infty\)</span> gilt <span data-type="math">\(f(x)\to-\infty\)</span>, für <span data-type="math">\(x\to-\infty\)</span> gilt <span data-type="math">\(f(x)\to\infty\)</span>. In Abbildung C verhält es sich umgekehrt (führender Term <span data-type="math">\(+x^3\)</span>).</p>
+<p>Damit passt <strong>Abbildung A</strong>.<span data-type="points" data-value="1"><input type="checkbox" id="points-1-4-1" name="points-1-4-1"></span></p>
+</div>
+</div>
+<label data-type="sum"><input type="text" id="Sum-Points-1" name="Sum-Points-1" inputmode="decimal" size="2"><span data-type="max">/7</span></label>
+</div>
+<div data-type="exercise" data-number="2" data-starred data-points="6" data-new-page>
+<h3>Aufgabe 2</h3>
+<p>Gegeben sind die Funktionen</p>
+<div data-type="displaymath">\[f(x)=-2x^5+3x^2-1 \qquad\text{und}\qquad g(x)=0{,}5x^4-6x+2.\]</div>
+<div data-type="task" data-points="1">
+<span data-type="label">a)</span>
+<p>Geben Sie den Grad von <span data-type="math">\(f\)</span> und <span data-type="math">\(g\)</span> an.</p>
+<div data-type="solution">
+<p><span data-type="math">\(f\)</span> hat Grad <span data-type="math">\(5\)</span>, <span data-type="math">\(g\)</span> hat Grad <span data-type="math">\(4\)</span>.<span data-type="points" data-value="1"><input type="checkbox" id="points-2-1-1" name="points-2-1-1"></span></p>
+</div>
+</div>
+<div data-type="vspace" style="--size: 8pt"></div>
+<div data-type="task" data-points="2">
+<span data-type="label">b)</span>
+<p>Beschreiben Sie das Verhalten von <span data-type="math">\(f\)</span> und <span data-type="math">\(g\)</span> für <span data-type="math">\(x\to\infty\)</span> sowie <span data-type="math">\(x\to-\infty\)</span>.</p>
+<div data-type="solution">
+<p>Der führende Term von <span data-type="math">\(f\)</span> ist <span data-type="math">\(-2x^5\)</span> (ungerader Grad, negatives Vorzeichen): <span data-type="math">\(f(x)\to-\infty\)</span> für <span data-type="math">\(x\to\infty\)</span> und <span data-type="math">\(f(x)\to\infty\)</span> für <span data-type="math">\(x\to-\infty\)</span>.<span data-type="points" data-value="1"><input type="checkbox" id="points-2-2-1" name="points-2-2-1"></span></p>
+<p>Der führende Term von <span data-type="math">\(g\)</span> ist <span data-type="math">\(0{,}5x^4\)</span> (gerader Grad, positives Vorzeichen): <span data-type="math">\(g(x)\to\infty\)</span> für <span data-type="math">\(x\to\infty\)</span> und für <span data-type="math">\(x\to-\infty\)</span>.<span data-type="points" data-value="1"><input type="checkbox" id="points-2-2-2" name="points-2-2-2"></span></p>
+</div>
+</div>
+<div data-type="vspace" style="--size: 8pt"></div>
+<div data-type="task" data-points="2">
+<span data-type="label">c)</span>
+<p>Bestimmen Sie die Nullstellen durch Ausklammern.</p>
+<div data-type="displaymath">\[f(x)=x^3-9x\]</div>
+<div data-type="solution">
+<div data-type="displaymath">\[x^3-9x=x(x^2-9)=x(x-3)(x+3)\]</div>
+<div data-type="displaymath">\[x_1=0,\quad x_2=3,\quad x_3=-3\]</div>
+<span data-type="points" data-value="2"><input type="checkbox" id="points-2-3-1" name="points-2-3-1"><input type="checkbox" id="points-2-3-2" name="points-2-3-2"></span>
+</div>
+</div>
+<div data-type="vspace" style="--size: 8pt"></div>
+<div data-type="task" data-points="1">
+<span data-type="label">d)</span>
+<p>Gegeben ist die Funktion <span data-type="math">\(h(x)=x^4+2x^2+1\)</span>. Geben Sie an, wie viele Nullstellen <span data-type="math">\(h\)</span> höchstens besitzen kann.</p>
+<div data-type="solution">
+<p>Grad <span data-type="math">\(4\)</span> <span data-type="math">\(\Rightarrow\)</span> höchstens <span data-type="math">\(4\)</span> Nullstellen.<span data-type="points" data-value="1"><input type="checkbox" id="points-2-4-1" name="points-2-4-1"></span></p>
+</div>
+</div>
+<label data-type="sum"><input type="text" id="Sum-Points-2" name="Sum-Points-2" inputmode="decimal" size="2"><span data-type="max">/6</span></label>
+</div>
+</section>
+<section data-type="section" data-id="B" data-points="30" data-new-page>
+<h2>Prüfungsteil B: Aufgaben mit Hilfsmitteln</h2>
+<div data-type="vspace" style="--size: 10pt"></div>
+<div data-type="exercise" data-number="3" data-starred data-points="16">
+<h3>Aufgabe 3</h3>
+<p>Die Körpertemperatur eines Patienten wird über einen Zeitraum von <span data-type="math">\(24\)</span> Stunden beobachtet. Sie steigt zunächst von <span data-type="math">\(37\,^\circ\mathrm C\)</span> auf einen Höchstwert von etwa <span data-type="math">\(39{,}7\,^\circ\mathrm C\)</span> an und fällt danach langsam wieder ab. Der Verlauf wird für <span data-type="math">\(0\le t\le24\)</span> modelliert durch</p>
+<div data-type="displaymath">\[f(t)=0{,}00074t^3-0{,}04667t^2+0{,}66t+37,\]</div>
+<p>wobei <span data-type="math">\(t\)</span> die Zeit in Stunden und <span data-type="math">\(f(t)\)</span> die Temperatur in <span data-type="math">\(^\circ\mathrm C\)</span> angibt.</p>
+<figure data-type="figure">
+<div data-type="tikz" code="\begin{axis}[
+  width=11cm, height=6.5cm,
+  xmin=0, xmax=24, ymin=36, ymax=40.5,
+  xlabel={$t$ [h]}, ylabel={$f(t)$ [$^\circ$C]},
+  axis lines=left, grid=both, grid style={gray!25},
+  minor tick num=1,
+  xtick={0,2,...,24}, ytick={36,36.5,...,40.5},
+  tick label style={font=\small}, label style={font=\small},
+  samples=200, domain=0:24,
+]
+\addplot[thick, blue!70!black] {0.00074*x^3-0.04667*x^2+0.66*x+37};
+\end{axis}"> missing tikz </div>
+</figure>
+<div data-type="task" data-points="2">
+<span data-type="label">a)</span>
+<p>Bestimmen Sie mit dem Graphen die höchste Fiebertemperatur.</p>
+<div data-type="solution">
+<p>Der Graph erreicht sein Maximum bei <span data-type="math">\(t\approx9\)</span> mit einer Temperatur von etwa <span data-type="math">\(39{,}7\,^\circ\mathrm C\)</span>.<span data-type="points" data-value="2"><input type="checkbox" id="points-3-1-1" name="points-3-1-1"><input type="checkbox" id="points-3-1-2" name="points-3-1-2"></span></p>
+</div>
+</div>
+<div data-type="vspace" style="--size: 8pt"></div>
+<div data-type="task" data-points="2">
+<span data-type="label">b)</span>
+<p>Ab <span data-type="math">\(38\,^\circ\mathrm C\)</span> spricht man von Fieber. Markieren Sie im Graphen den Zeitraum, in dem Fieber vorliegt.</p>
+<div data-type="solution">
+<p>Der Graph verläuft oberhalb von <span data-type="math">\(38\,^\circ\mathrm C\)</span> etwa im Bereich <span data-type="math">\(1{,}7\le t\le18{,}3\)</span> – dieser Zeitraum ist im Graphen zu markieren.<span data-type="points" data-value="2"><input type="checkbox" id="points-3-2-1" name="points-3-2-1"><input type="checkbox" id="points-3-2-2" name="points-3-2-2"></span></p>
+</div>
+</div>
+<div data-type="vspace" style="--size: 8pt"></div>
+<div data-type="task" data-points="2">
+<span data-type="label">c)</span>
+<p>Bestimmen Sie näherungsweise mit dem Graphen den Zeitpunkt, ab dem die Temperatur wieder unter <span data-type="math">\(37\,^\circ\mathrm C\)</span> liegt.</p>
+<div data-type="solution">
+<p>Der Graph unterschreitet <span data-type="math">\(37\,^\circ\mathrm C\)</span> bei etwa <span data-type="math">\(t\approx21{,}4\)</span>, also nach ungefähr <span data-type="math">\(21\)</span> Stunden und <span data-type="math">\(24\)</span> Minuten.<span data-type="points" data-value="2"><input type="checkbox" id="points-3-3-1" name="points-3-3-1"><input type="checkbox" id="points-3-3-2" name="points-3-3-2"></span></p>
+</div>
+</div>
+<div data-type="vspace" style="--size: 8pt"></div>
+<div data-type="task" data-points="2">
+<span data-type="label">d)</span>
+<p>Erklären Sie die Bedeutung der Zahl <span data-type="math">\(37\)</span> in der Funktionsgleichung.</p>
+<div data-type="solution">
+<p><span data-type="math">\(f(0)=37\)</span>: Zu Beginn der Beobachtung (<span data-type="math">\(t=0\)</span>) beträgt die Temperatur <span data-type="math">\(37\,^\circ\mathrm C\)</span>, also die normale Körpertemperatur.<span data-type="points" data-value="2"><input type="checkbox" id="points-3-4-1" name="points-3-4-1"><input type="checkbox" id="points-3-4-2" name="points-3-4-2"></span></p>
+</div>
+</div>
+<div data-type="vspace" style="--size: 8pt"></div>
+<div data-type="task" data-points="3">
+<span data-type="label">e)</span>
+<p>Bestimmen Sie den Grenzwert von <span data-type="math">\(f(t)\)</span> für <span data-type="math">\(t\to\infty\)</span> und erklären Sie damit, warum man <span data-type="math">\(f\)</span> nur für <span data-type="math">\(0\le t\le24\)</span> betrachten sollte.</p>
+<div data-type="solution">
+<div data-type="displaymath">\[\lim_{t\to\infty}f(t)=\infty\]</div>
+<p><span data-type="points" data-value="1"><input type="checkbox" id="points-3-5-1" name="points-3-5-1"></span>Eine Körpertemperatur kann nicht unbegrenzt weiter ansteigen – außerhalb von <span data-type="math">\(0\le t\le24\)</span> beschreibt der Funktionsterm keinen sinnvollen Temperaturverlauf mehr, das Modell verliert dort seine Bedeutung.<span data-type="points" data-value="2"><input type="checkbox" id="points-3-5-2" name="points-3-5-2"><input type="checkbox" id="points-3-5-3" name="points-3-5-3"></span></p>
+</div>
+</div>
+<div data-type="vspace" style="--size: 8pt"></div>
+<div data-type="task" data-points="5">
+<span data-type="label">f)</span>
+<p>Zwischen Stunde <span data-type="math">\(16\)</span> und Stunde <span data-type="math">\(22\)</span> nimmt die Temperatur näherungsweise linear ab.</p>
+<p>(i) Berechnen Sie die Temperatur zu beiden Zeitpunkten.</p>
+<p>(ii) Bestimmen Sie eine lineare Funktion <span data-type="math">\(g(t)=mt+b\)</span>, die den Temperaturverlauf in diesem Zeitraum beschreibt.</p>
+<div data-type="solution">
+<p>(i)</p>
+<div data-type="displaymath">\[f(16)\approx38{,}6\,^\circ\mathrm C,\qquad f(22)\approx36{,}8\,^\circ\mathrm C\]</div>
+<span data-type="points" data-value="2"><input type="checkbox" id="points-3-6-1" name="points-3-6-1"><input type="checkbox" id="points-3-6-2" name="points-3-6-2"></span>
+<p>(ii)</p>
+<div data-type="displaymath">\[m=\frac{36{,}8-38{,}6}{22-16}=\frac{-1{,}8}{6}=-0{,}3\]</div>
+<p>Einsetzen: <span data-type="math">\(38{,}6=-0{,}3\cdot16+b\Rightarrow b=43{,}4\)</span>.</p>
+<div data-type="displaymath">\[g(t)=-0{,}3t+43{,}4\]</div>
+<span data-type="points" data-value="3"><input type="checkbox" id="points-3-6-3" name="points-3-6-3"><input type="checkbox" id="points-3-6-4" name="points-3-6-4"><input type="checkbox" id="points-3-6-5" name="points-3-6-5"></span>
+</div>
+</div>
+<label data-type="sum"><input type="text" id="Sum-Points-3" name="Sum-Points-3" inputmode="decimal" size="2"><span data-type="max">/16</span></label>
+</div>
+<div data-type="exercise" data-number="4" data-starred data-points="14" data-new-page>
+<h3>Aufgabe 4</h3>
+<p>Für ein Skatepark-Element (eine sogenannte <em>Wave</em>) wird die Auslenkung der Fahrbahn gegenüber einer Bezugslinie für <span data-type="math">\(-9\le x\le9\)</span> (in Metern) durch die Funktion</p>
+<div data-type="displaymath">\[h(x)=-0{,}01x^3+0{,}81x\]</div>
+<p>modelliert. Dabei ist <span data-type="math">\(x\)</span> die waagerechte Entfernung von der Mitte der Anlage in Metern und <span data-type="math">\(h(x)\)</span> die Auslenkung in Metern.</p>
+<div data-type="task" data-points="2">
+<span data-type="label">a)</span>
+<p>Berechnen Sie <span data-type="math">\(h(3)\)</span> und deuten Sie das Ergebnis im Sachzusammenhang.</p>
+<div data-type="solution">
+<div data-type="displaymath">\[h(3)=-0{,}01\cdot27+0{,}81\cdot3=-0{,}27+2{,}43=2{,}16\]</div>
+<p><span data-type="points" data-value="1"><input type="checkbox" id="points-4-1-1" name="points-4-1-1"></span>Bei <span data-type="math">\(3\,\mathrm m\)</span> Entfernung von der Mitte liegt die Fahrbahn <span data-type="math">\(2{,}16\,\mathrm m\)</span> oberhalb der Bezugslinie.<span data-type="points" data-value="1"><input type="checkbox" id="points-4-1-2" name="points-4-1-2"></span></p>
+</div>
+</div>
+<div data-type="task" data-points="4">
+<span data-type="label">b)</span>
+<p>Bestimmen Sie rechnerisch die Nullstellen von <span data-type="math">\(h\)</span>.</p>
+<div data-type="solution">
+<div data-type="displaymath">\[-0{,}01x^3+0{,}81x=0\]</div>
+<div data-type="displaymath">\[x(-0{,}01x^2+0{,}81)=0\]</div>
+<p><span data-type="points" data-value="2"><input type="checkbox" id="points-4-2-1" name="points-4-2-1"><input type="checkbox" id="points-4-2-2" name="points-4-2-2"></span> <span data-type="math">\(x=0\)</span> oder <span data-type="math">\(-0{,}01x^2+0{,}81=0 \Rightarrow x^2=81 \Rightarrow x=9\)</span> oder <span data-type="math">\(x=-9\)</span>.</p>
+<div data-type="displaymath">\[x_1=-9,\qquad x_2=0,\qquad x_3=9\]</div>
+<span data-type="points" data-value="2"><input type="checkbox" id="points-4-2-3" name="points-4-2-3"><input type="checkbox" id="points-4-2-4" name="points-4-2-4"></span>
+</div>
+</div>
+<div data-type="task" data-points="3">
+<span data-type="label">c)</span>
+<p>Weisen Sie rechnerisch nach, dass der Graph von <span data-type="math">\(h\)</span> punktsymmetrisch zum Ursprung ist, und deuten Sie diese Eigenschaft im Sachzusammenhang.</p>
+<div data-type="solution">
+<div data-type="displaymath">\[h(-x)=-0{,}01(-x)^3+0{,}81(-x)=0{,}01x^3-0{,}81x=-h(x)\]</div>
+<p>Also ist <span data-type="math">\(h\)</span> punktsymmetrisch zum Ursprung.<span data-type="points" data-value="2"><input type="checkbox" id="points-4-3-1" name="points-4-3-1"><input type="checkbox" id="points-4-3-2" name="points-4-3-2"></span> Im Sachzusammenhang bedeutet das: Die Fahrbahn verläuft auf beiden Seiten der Mitte spiegelbildlich (mit umgekehrtem Vorzeichen der Auslenkung).<span data-type="points" data-value="1"><input type="checkbox" id="points-4-3-3" name="points-4-3-3"></span></p>
+</div>
+</div>
+<div data-type="task" data-points="2">
+<span data-type="label">d)</span>
+<p>Erläutern Sie, warum das Modell sinnvollerweise nur für <span data-type="math">\(-9\le x\le9\)</span> verwendet wird.</p>
+<div data-type="solution">
+<p>Bei <span data-type="math">\(x=-9\)</span> und <span data-type="math">\(x=9\)</span> nimmt <span data-type="math">\(h\)</span> den Wert <span data-type="math">\(0\)</span> an (siehe Nullstellen) – dort trifft die Fahrbahn wieder auf die Bezugslinie, das Bauwerk endet an diesen Stellen. Außerhalb dieses Bereichs beschreibt der Funktionsterm keine reale Fahrbahn mehr, das Modell verliert dort seine Bedeutung.<span data-type="points" data-value="2"><input type="checkbox" id="points-4-4-1" name="points-4-4-1"><input type="checkbox" id="points-4-4-2" name="points-4-4-2"></span></p>
+</div>
+</div>
+<div data-type="vspace" style="--size: 8pt"></div>
+<div data-type="task" data-points="1">
+<span data-type="label">e)</span>
+<p>Die Fahrbahn beginnt und endet jeweils an einem <em>Einstiegspunkt</em>. Bestimmen Sie die Entfernung zwischen den beiden Einstiegspunkten der Wave.</p>
+<div data-type="solution">
+<p>Die Einstiegspunkte liegen bei <span data-type="math">\(x=-9\)</span> und <span data-type="math">\(x=9\)</span> (siehe Nullstellen). Die Entfernung beträgt</p>
+<div data-type="displaymath">\[9-(-9)=18\,\mathrm m.\]</div>
+<span data-type="points" data-value="1"><input type="checkbox" id="points-4-5-1" name="points-4-5-1"></span>
+</div>
+</div>
+<div data-type="vspace" style="--size: 8pt"></div>
+<div data-type="task" data-points="2">
+<span data-type="label">f)</span>
+<p>Berechnen Sie die Höhe der Fahrbahn an den beiden Einstiegspunkten.</p>
+<div data-type="solution">
+<div data-type="displaymath">\[h(-9)=-0{,}01\cdot(-729)+0{,}81\cdot(-9)=7{,}29-7{,}29=0\]</div>
+<div data-type="displaymath">\[h(9)=-0{,}01\cdot729+0{,}81\cdot9=-7{,}29+7{,}29=0\]</div>
+<p>An beiden Einstiegspunkten liegt die Fahrbahn auf Höhe der Bezugslinie (<span data-type="math">\(0\,\mathrm m\)</span>).<span data-type="points" data-value="2"><input type="checkbox" id="points-4-6-1" name="points-4-6-1"><input type="checkbox" id="points-4-6-2" name="points-4-6-2"></span></p>
+</div>
+</div>
+<label data-type="sum"><input type="text" id="Sum-Points-4" name="Sum-Points-4" inputmode="decimal" size="2"><span data-type="max">/14</span></label>
+</div>
+</section>
+<footer data-type="grading">
+<label data-type="total">Summe <input type="text" id="SumPointsTotal" name="SumPointsTotal" inputmode="decimal" size="3"><span data-type="max">/43</span></label>
+<label data-type="grade">Note <input type="text" id="Grade" name="Grade" size="28"></label>
+<label data-type="checkdate">Datum <input type="text" id="CheckDate" name="CheckDate"></label>
+<label data-type="signature">Lehrkraft <input type="text" id="Signature" name="Signature"></label>
+<span data-type="actions"><button type="button" data-action="download">JSON herunterladen</button><button type="button" data-action="load">JSON laden</button><input type="file" accept="application/json,.json" data-action="load-file" hidden></span>
+</footer>
+</article>
+</form>

@@ -1,0 +1,2596 @@
+{
+  "type": "exam",
+  "args": {
+    "format": "exam_ef",
+    "examName": "Klausur 1",
+    "date": "",
+    "title": "Mathematik EF GK",
+    "points": 43
+  },
+  "children": [
+    {
+      "type": "section",
+      "args": {
+        "id": "A",
+        "title": "Prüfungsteil A: Aufgaben ohne Hilfsmittel",
+        "points": 13
+      },
+      "children": [
+        {
+          "type": "vspace",
+          "args": {
+            "size": "10pt"
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "bold",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Hinweis:"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "args": {
+                "value": " Für Prüfungsteil A sind außer Zeichengeräten keine Hilfsmittel zugelassen."
+              }
+            }
+          ]
+        },
+        {
+          "type": "vspace",
+          "args": {
+            "size": "10pt"
+          }
+        },
+        {
+          "type": "exercise",
+          "args": {
+            "title": "Aufgabe 1",
+            "starred": true,
+            "points": 7
+          },
+          "children": [
+            {
+              "type": "task",
+              "args": {
+                "points": 3
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Betrachten Sie die Zuordnung zwischen den Schülerinnen und Schülern einer Klasse und ihren Geburtsdaten."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(i) Ist die Zuordnung "
+                      }
+                    },
+                    {
+                      "type": "emph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Schüler "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\to"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " Geburtsdatum"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " eine Funktion? Begründen Sie."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(ii) Ist die Zuordnung "
+                      }
+                    },
+                    {
+                      "type": "emph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Geburtsdatum "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\to"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " Schüler"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " eine Funktion? Begründen Sie."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(i) Es liegt eine Funktion vor, da jeder Schüler genau ein Geburtsdatum besitzt."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(ii) Es liegt "
+                          }
+                        },
+                        {
+                          "type": "bold",
+                          "children": [
+                            {
+                              "type": "text",
+                              "args": {
+                                "value": "keine"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " Funktion vor: Haben zwei Schüler am selben Tag Geburtstag, wird diesem Geburtsdatum mehr als ein Schüler zugeordnet – die Zuordnung ist dann nicht eindeutig."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 1
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Entscheiden Sie allein anhand der Exponenten, ob der Graph von"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "displaymath",
+                  "args": {
+                    "tex": "f(x)=3x^4-x^2+5"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "achsensymmetrisch zur "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "y"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "-Achse, punktsymmetrisch zum Ursprung oder keins von beidem ist."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Nur gerade Exponenten "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\Rightarrow"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " achsensymmetrisch zur "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "y"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "-Achse."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Weisen Sie rechnerisch nach, ob der Graph von"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "displaymath",
+                  "args": {
+                    "tex": "g(x)=-x^5+2x^3-x"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "achsensymmetrisch zur "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "y"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "-Achse oder punktsymmetrisch zum Ursprung ist."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "g(-x)=-(-x)^5+2(-x)^3-(-x)=x^5-2x^3+x=-\\left(-x^5+2x^3-x\\right)=-g(x)"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Also ist der Graph punktsymmetrisch zum Ursprung."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 1
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Gegeben ist die Funktion "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " mit"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "displaymath",
+                  "args": {
+                    "tex": "f(x)=-x^3+4x."
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Eine der drei Abbildungen zeigt den Graphen von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ". Geben Sie die passende Abbildung an und begründen Sie Ihre Entscheidung mithilfe von Symmetrie und Randverhalten."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "figure",
+                  "children": [
+                    {
+                      "type": "tikz",
+                      "args": {
+                        "code": "\\begin{axis}[width=4.3cm,height=4.3cm,axis lines=middle,xmin=-2.8,xmax=2.8,ymin=-8,ymax=8,xtick=\\empty,ytick=\\empty,samples=100,domain=-2.6:2.6]\n\\addplot[thick] {-x^3+4*x};\n\\end{axis}\n\\node at (2.15,3.9) {\\textbf{A}};"
+                      }
+                    },
+                    {
+                      "type": "tikz",
+                      "args": {
+                        "code": "\\begin{axis}[width=4.3cm,height=4.3cm,axis lines=middle,xmin=-2.8,xmax=2.8,ymin=-8,ymax=8,xtick=\\empty,ytick=\\empty,samples=100,domain=-2.6:2.6]\n\\addplot[thick] {-0.3*x^4+2*x^2};\n\\end{axis}\n\\node at (2.15,3.9) {\\textbf{B}};"
+                      }
+                    },
+                    {
+                      "type": "tikz",
+                      "args": {
+                        "code": "\\begin{axis}[width=4.3cm,height=4.3cm,axis lines=middle,xmin=-2.8,xmax=2.8,ymin=-8,ymax=8,xtick=\\empty,ytick=\\empty,samples=100,domain=-2.6:2.6]\n\\addplot[thick] {x^3-4*x};\n\\end{axis}\n\\node at (2.15,3.9) {\\textbf{C}};"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " enthält nur ungerade Exponenten, ist also punktsymmetrisch zum Ursprung – das schließt Abbildung B (achsensymmetrisch) aus."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Der führende Term von "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " ist "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "-x^3"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", also negatives Vorzeichen bei ungeradem Grad "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "3"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ": für "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x\\to\\infty"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " gilt "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f(x)\\to-\\infty"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", für "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x\\to-\\infty"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " gilt "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f(x)\\to\\infty"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ". In Abbildung C verhält es sich umgekehrt (führender Term "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "+x^3"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ")."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Damit passt "
+                          }
+                        },
+                        {
+                          "type": "bold",
+                          "children": [
+                            {
+                              "type": "text",
+                              "args": {
+                                "value": "Abbildung A"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "args": {
+            "title": "Aufgabe 2",
+            "starred": true,
+            "newPage": true,
+            "points": 6
+          },
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Gegeben sind die Funktionen"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "displaymath",
+              "args": {
+                "tex": "f(x)=-2x^5+3x^2-1 \\qquad\\text{und}\\qquad g(x)=0{,}5x^4-6x+2."
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 1
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Geben Sie den Grad von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "g"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " an."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " hat Grad "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "5"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "g"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " hat Grad "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "4"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Beschreiben Sie das Verhalten von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "g"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " für "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "x\\to\\infty"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " sowie "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "x\\to-\\infty"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Der führende Term von "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " ist "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "-2x^5"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " (ungerader Grad, negatives Vorzeichen): "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f(x)\\to-\\infty"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " für "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x\\to\\infty"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " und "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f(x)\\to\\infty"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " für "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x\\to-\\infty"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Der führende Term von "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "g"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " ist "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "0{,}5x^4"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " (gerader Grad, positives Vorzeichen): "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "g(x)\\to\\infty"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " für "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x\\to\\infty"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " und für "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x\\to-\\infty"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Bestimmen Sie die Nullstellen durch Ausklammern."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "displaymath",
+                  "args": {
+                    "tex": "f(x)=x^3-9x"
+                  }
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "x^3-9x=x(x^2-9)=x(x-3)(x+3)"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "x_1=0,\\quad x_2=3,\\quad x_3=-3"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 1
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Gegeben ist die Funktion "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "h(x)=x^4+2x^2+1"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ". Geben Sie an, wie viele Nullstellen "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "h"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " höchstens besitzen kann."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Grad "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "4"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "\\Rightarrow"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " höchstens "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "4"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " Nullstellen."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "args": {
+        "id": "B",
+        "title": "Prüfungsteil B: Aufgaben mit Hilfsmitteln",
+        "newPage": true,
+        "points": 30
+      },
+      "children": [
+        {
+          "type": "vspace",
+          "args": {
+            "size": "10pt"
+          }
+        },
+        {
+          "type": "exercise",
+          "args": {
+            "title": "Aufgabe 3",
+            "starred": true,
+            "points": 16
+          },
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Die Körpertemperatur eines Patienten wird über einen Zeitraum von "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "24"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " Stunden beobachtet. Sie steigt zunächst von "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "37\\,^\\circ\\mathrm C"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " auf einen Höchstwert von etwa "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "39{,}7\\,^\\circ\\mathrm C"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " an und fällt danach langsam wieder ab. Der Verlauf wird für "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "0\\le t\\le24"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " modelliert durch"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "displaymath",
+              "args": {
+                "tex": "f(t)=0{,}00074t^3-0{,}04667t^2+0{,}66t+37,"
+              }
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "wobei "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "t"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " die Zeit in Stunden und "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "f(t)"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " die Temperatur in "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "^\\circ\\mathrm C"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " angibt."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "figure",
+              "children": [
+                {
+                  "type": "tikz",
+                  "args": {
+                    "code": "\\begin{axis}[\n  width=11cm, height=6.5cm,\n  xmin=0, xmax=24, ymin=36, ymax=40.5,\n  xlabel={$t$ [h]}, ylabel={$f(t)$ [$^\\circ$C]},\n  axis lines=left, grid=both, grid style={gray!25},\n  minor tick num=1,\n  xtick={0,2,...,24}, ytick={36,36.5,...,40.5},\n  tick label style={font=\\small}, label style={font=\\small},\n  samples=200, domain=0:24,\n]\n\\addplot[thick, blue!70!black] {0.00074*x^3-0.04667*x^2+0.66*x+37};\n\\end{axis}"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Bestimmen Sie mit dem Graphen die höchste Fiebertemperatur."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Der Graph erreicht sein Maximum bei "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "t\\approx9"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " mit einer Temperatur von etwa "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "39{,}7\\,^\\circ\\mathrm C"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Ab "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "38\\,^\\circ\\mathrm C"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " spricht man von Fieber. Markieren Sie im Graphen den Zeitraum, in dem Fieber vorliegt."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Der Graph verläuft oberhalb von "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "38\\,^\\circ\\mathrm C"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " etwa im Bereich "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "1{,}7\\le t\\le18{,}3"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " – dieser Zeitraum ist im Graphen zu markieren."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Bestimmen Sie näherungsweise mit dem Graphen den Zeitpunkt, ab dem die Temperatur wieder unter "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "37\\,^\\circ\\mathrm C"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " liegt."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Der Graph unterschreitet "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "37\\,^\\circ\\mathrm C"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " bei etwa "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "t\\approx21{,}4"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", also nach ungefähr "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "21"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " Stunden und "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "24"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " Minuten."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Erklären Sie die Bedeutung der Zahl "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "37"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " in der Funktionsgleichung."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "f(0)=37"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ": Zu Beginn der Beobachtung ("
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "t=0"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ") beträgt die Temperatur "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "37\\,^\\circ\\mathrm C"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ", also die normale Körpertemperatur."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 3
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Bestimmen Sie den Grenzwert von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f(t)"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " für "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "t\\to\\infty"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und erklären Sie damit, warum man "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "f"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " nur für "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "0\\le t\\le24"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " betrachten sollte."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "\\lim_{t\\to\\infty}f(t)=\\infty"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Eine Körpertemperatur kann nicht unbegrenzt weiter ansteigen – außerhalb von "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "0\\le t\\le24"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " beschreibt der Funktionsterm keinen sinnvollen Temperaturverlauf mehr, das Modell verliert dort seine Bedeutung."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 5
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Zwischen Stunde "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "16"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und Stunde "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "22"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " nimmt die Temperatur näherungsweise linear ab."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(i) Berechnen Sie die Temperatur zu beiden Zeitpunkten."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "(ii) Bestimmen Sie eine lineare Funktion "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "g(t)=mt+b"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ", die den Temperaturverlauf in diesem Zeitraum beschreibt."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(i)"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "f(16)\\approx38{,}6\\,^\\circ\\mathrm C,\\qquad f(22)\\approx36{,}8\\,^\\circ\\mathrm C"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 2
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "(ii)"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "m=\\frac{36{,}8-38{,}6}{22-16}=\\frac{-1{,}8}{6}=-0{,}3"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Einsetzen: "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "38{,}6=-0{,}3\\cdot16+b\\Rightarrow b=43{,}4"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "g(t)=-0{,}3t+43{,}4"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 3
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "args": {
+            "title": "Aufgabe 4",
+            "starred": true,
+            "points": 14,
+            "newPage": true
+          },
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "Für ein Skatepark-Element (eine sogenannte "
+                  }
+                },
+                {
+                  "type": "emph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Wave"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": ") wird die Auslenkung der Fahrbahn gegenüber einer Bezugslinie für "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "-9\\le x\\le9"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " (in Metern) durch die Funktion"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "displaymath",
+              "args": {
+                "tex": "h(x)=-0{,}01x^3+0{,}81x"
+              }
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "args": {
+                    "value": "modelliert. Dabei ist "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "x"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " die waagerechte Entfernung von der Mitte der Anlage in Metern und "
+                  }
+                },
+                {
+                  "type": "math",
+                  "args": {
+                    "tex": "h(x)"
+                  }
+                },
+                {
+                  "type": "text",
+                  "args": {
+                    "value": " die Auslenkung in Metern."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Berechnen Sie "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "h(3)"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " und deuten Sie das Ergebnis im Sachzusammenhang."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "h(3)=-0{,}01\\cdot27+0{,}81\\cdot3=-0{,}27+2{,}43=2{,}16"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Bei "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "3\\,\\mathrm m"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " Entfernung von der Mitte liegt die Fahrbahn "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "2{,}16\\,\\mathrm m"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " oberhalb der Bezugslinie."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 4
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Bestimmen Sie rechnerisch die Nullstellen von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "h"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "-0{,}01x^3+0{,}81x=0"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "x(-0{,}01x^2+0{,}81)=0"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x=0"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " oder "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "-0{,}01x^2+0{,}81=0 \\Rightarrow x^2=81 \\Rightarrow x=9"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " oder "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x=-9"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "x_1=-9,\\qquad x_2=0,\\qquad x_3=9"
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 3
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Weisen Sie rechnerisch nach, dass der Graph von "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "h"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " punktsymmetrisch zum Ursprung ist, und deuten Sie diese Eigenschaft im Sachzusammenhang."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "h(-x)=-0{,}01(-x)^3+0{,}81(-x)=0{,}01x^3-0{,}81x=-h(x)"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Also ist "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "h"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " punktsymmetrisch zum Ursprung."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " Im Sachzusammenhang bedeutet das: Die Fahrbahn verläuft auf beiden Seiten der Mitte spiegelbildlich (mit umgekehrtem Vorzeichen der Auslenkung)."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 1
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Erläutern Sie, warum das Modell sinnvollerweise nur für "
+                      }
+                    },
+                    {
+                      "type": "math",
+                      "args": {
+                        "tex": "-9\\le x\\le9"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": " verwendet wird."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Bei "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x=-9"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " und "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x=9"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " nimmt "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "h"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " den Wert "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "0"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " an (siehe Nullstellen) – dort trifft die Fahrbahn wieder auf die Bezugslinie, das Bauwerk endet an diesen Stellen. Außerhalb dieses Bereichs beschreibt der Funktionsterm keine reale Fahrbahn mehr, das Modell verliert dort seine Bedeutung."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 1
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Die Fahrbahn beginnt und endet jeweils an einem "
+                      }
+                    },
+                    {
+                      "type": "emph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Einstiegspunkt"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": ". Bestimmen Sie die Entfernung zwischen den beiden Einstiegspunkten der Wave."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "Die Einstiegspunkte liegen bei "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x=-9"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " und "
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "x=9"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": " (siehe Nullstellen). Die Entfernung beträgt"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "9-(-9)=18\\,\\mathrm m."
+                      }
+                    },
+                    {
+                      "type": "points",
+                      "args": {
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vspace",
+              "args": {
+                "size": "8pt"
+              }
+            },
+            {
+              "type": "task",
+              "args": {
+                "points": 2
+              },
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "args": {
+                        "value": "Berechnen Sie die Höhe der Fahrbahn an den beiden Einstiegspunkten."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "solution",
+                  "children": [
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "h(-9)=-0{,}01\\cdot(-729)+0{,}81\\cdot(-9)=7{,}29-7{,}29=0"
+                      }
+                    },
+                    {
+                      "type": "displaymath",
+                      "args": {
+                        "tex": "h(9)=-0{,}01\\cdot729+0{,}81\\cdot9=-7{,}29+7{,}29=0"
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": "An beiden Einstiegspunkten liegt die Fahrbahn auf Höhe der Bezugslinie ("
+                          }
+                        },
+                        {
+                          "type": "math",
+                          "args": {
+                            "tex": "0\\,\\mathrm m"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "args": {
+                            "value": ")."
+                          }
+                        },
+                        {
+                          "type": "points",
+                          "args": {
+                            "value": 2
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

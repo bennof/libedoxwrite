@@ -1,0 +1,5 @@
+{# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #}
+{# Nodes with sep between them (blocks: a line break). #}
+{% component components.helpers.join(nodes: array, sep: string = "\n") %}
+{% for c in nodes %}{% if not loop.first %}{{ sep }}{% endif %}{{ render(node=c) }}{% endfor %}
+{%- endcomponent %}

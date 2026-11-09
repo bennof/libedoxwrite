@@ -1,0 +1,5 @@
+{# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #}
+{% component components.vspace(node: object) %}
+{% set style = cssVars(size=node.args.size) %}
+<div data-type="vspace"{% if style %} style="{{ style }}"{% endif %}></div>
+{%- endcomponent %}

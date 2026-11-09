@@ -1,0 +1,7 @@
+{# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #}
+{% component components.section(node: object) %}
+<section data-type="section"{% if node.args.id != null %} data-id="{{ node.args.id }}"{% endif %}{% if node.args.choice %} data-select="{{ node.args.choice.select }}"{% endif %}{% if node.args.points != null %} data-points="{{ node.args.points }}"{% endif %}{% if node.args.newPage %} data-new-page{% endif %}>
+<h2>{{ components.helpers.title(node=node) }}</h2>
+{{ components.helpers.join(nodes=node.children) }}
+</section>
+{%- endcomponent %}

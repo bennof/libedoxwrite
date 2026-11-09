@@ -1,0 +1,6 @@
+{# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #}
+{% component components.solution(node: object) %}
+<div data-type="solution">
+{{ components.helpers.join(nodes=node.children) }}
+</div>
+{%- endcomponent %}

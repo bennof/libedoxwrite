@@ -1,0 +1,7 @@
+{# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #}
+{# The TeX stays as it is; KaTeX typesets it. #}
+{% component components.displaymath(node: object) %}
+{% if node.args.env %}
+<div data-type="displaymath">\begin{ {{- node.args.env -}} }{{ node.args.tex }}\end{ {{- node.args.env -}} }</div>{% else -%}
+<div data-type="displaymath">\[{{ node.args.tex }}\]</div>{% endif %}
+{%- endcomponent %}

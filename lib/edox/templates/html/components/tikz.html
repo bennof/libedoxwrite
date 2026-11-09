@@ -1,0 +1,3 @@
+{# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #}
+{# Not rendered yet: the code waits for a TikZ → PNG service. #}
+{% component components.tikz(node: object) %}<div data-type="tikz" code="{{ node.args.code }}"{% if node.args.options != null %} options="{{ node.args.options }}"{% endif %}> missing tikz </div>{% endcomponent %}

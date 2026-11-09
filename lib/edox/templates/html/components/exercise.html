@@ -1,0 +1,12 @@
+{# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #}
+{# An exercise; Sum-Points-<number> is its sum field in the PDF. #}
+{% component components.exercise(node: object) %}
+{% set no = exerciseNumber(node=node) %}
+<div data-type="exercise"{% if no != null %} data-number="{{ no }}"{% endif %}{% if node.args.starred %} data-starred{% endif %}{% if node.args.points != null %} data-points="{{ node.args.points }}"{% endif %}{% if node.args.newPage %} data-new-page{% endif %}>
+{% if node.args.title != null or node.args.titleTex != null %}
+<h3>{{ components.helpers.title(node=node) }}</h3>
+{% endif %}
+{{ components.helpers.join(nodes=node.children) }}{% if no != null %}
+<label data-type="sum"><input type="text" id="Sum-Points-{{ no }}" name="Sum-Points-{{ no }}" inputmode="decimal" size="2">{% if node.args.points %}<span data-type="max">/{{ node.args.points }}</span>{% endif %}</label>{% endif %}
+</div>
+{%- endcomponent %}

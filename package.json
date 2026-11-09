@@ -27,7 +27,7 @@
   "scripts": {
     "build": "tsc --project tsconfig.build.json && node scripts/copy-templates.mjs",
     "check": "tsc --project tsconfig.json --pretty false",
-    "test": "node --import=tsx --test lib/template/*.test.ts tests/*.test.ts",
+    "test": "node --import=tsx --test lib/template/*.test.ts lib/edox/*.test.ts lib/edox/*/*.test.ts tests/*.test.ts",
     "prepack": "npm run check && npm test && npm run build && npm run licenses",
     "licenses": "node scripts/bundle-licenses.mjs"
   },

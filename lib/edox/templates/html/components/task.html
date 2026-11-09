@@ -1,0 +1,12 @@
+{# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #}
+{# A subexercise: label a), b) … as in the class (not when starred); its width comes as the CSS variable --width. #}
+{% component components.task(node: object) %}
+{% set style = cssVars(width=node.args.width) %}
+<div data-type="task"{% if node.args.starred %} data-starred{% endif %}{% if node.args.points != null %} data-points="{{ node.args.points }}"{% endif %}{% if node.args.newPage %} data-new-page{% endif %}{% if node.args.width != null %} data-width{% endif %}{% if style %} style="{{ style }}"{% endif %}>
+{% set label = taskLabel(node=node) %}
+{% if label and not node.args.starred %}
+<span data-type="label">{{ label }}</span>
+{% endif %}
+{{ components.helpers.join(nodes=node.children) }}
+</div>
+{%- endcomponent %}
