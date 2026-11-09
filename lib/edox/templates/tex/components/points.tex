@@ -1,0 +1,3 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<# Points: \pp for one, \pp[n] otherwise. #>
+<% component components.points(node: object) %><% if node.args.value | default(value=1) == 1 %>\pp<% else %>\pp[<< node.args.value >>]<% endif %><% endcomponent %>

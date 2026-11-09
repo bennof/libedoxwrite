@@ -1,0 +1,10 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<% component components.displaymath(node: object) %>
+<% if node.args.env %>
+\begin{<< node.args.env >>}
+<< node.args.tex >>
+\end{<< node.args.env >>}<% else -%>
+\[
+<< node.args.tex >>
+\]<% endif %>
+<%- endcomponent %>

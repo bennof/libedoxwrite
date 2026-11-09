@@ -1,0 +1,7 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<% component components.section(node: object) %>
+<% if node.args.newPage %>
+\newpage
+<% endif %>
+\<< node.args.command | default(value="wssection") >><% if node.args.id != null %>[<< node.args.id >>]<% endif %>{<< components.helpers.title(node=node) >>}<< components.helpers.blocks(nodes=node.children, prev="section") >>
+<%- endcomponent %>

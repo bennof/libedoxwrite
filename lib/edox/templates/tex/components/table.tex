@@ -1,0 +1,24 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<# A tabular: args.rows[row][cell] holds the inline nodes of each cell, layout from tableLayout (src/shared/edox/table.ts). #>
+<% component components.table(node: object) %>
+<% set grid = node.args.rules == "grid" %>
+<% if node.args.center %>
+\begin{center}
+<% elif node.args.stretch != null %>
+{%
+<% endif %>
+<% if node.args.stretch != null %>
+\renewcommand{\arraystretch}{<< node.args.stretch >>}
+<% endif %>
+\begin{tabular}{<< tableSpec(args=node.args) >>}
+<% if grid %>
+\hline
+<% endif %>
+<% for row in tableLayout(args=node.args) %>
+<% set lastRow = loop.last %>
+<% for cell in row.cells %><% if not loop.first %> & <% endif %><% if cell.span != null %>\multicolumn{<< cell.span >>}{<< cell.spanSpec >>}{<< components.helpers.inline(nodes=cell.nodes) >>}<% else %><< components.helpers.inline(nodes=cell.nodes) >><% endif %><% endfor %><% if grid or not lastRow %>\\<% if row.space != "" %>[<< row.space >>]<% endif %><% endif %><% if grid %>
+\hline<% endif %>
+<% endfor %>
+\end{tabular}<% if node.args.center %>
+\end{center}<% elif node.args.stretch != null %>}<% endif %>
+<%- endcomponent %>

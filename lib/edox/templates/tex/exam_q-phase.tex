@@ -1,0 +1,70 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<# Q-Phase Exam #> 
+\documentclass[lang=ngerman]{edoxarticle}
+
+<% if node.args.macros | default(value=[]) | length > 0 %>
+
+<% for m in node.args.macros %>
+\<% if m.provide %>providecommand<% else %>newcommand<% endif %>{\<< m.name >>}<% if m.args != null %>[<< m.args >>]<% endif %><% if m.default != null %>[<< m.default >>]<% endif %>{<< m.body >>}
+<% endfor %>
+<% endif %>
+<% if node.args.examName != null %>
+\renewcommand\examname{<< node.args.examName >>}
+<% endif %>
+<% if node.args.pointsName != null %>
+\renewcommand\pointsname{<< node.args.pointsName >>}
+<% endif %>
+
+\begin{document}
+<% if node.args.date != null %>
+\pdate{<< node.args.date >>}
+<% endif %>
+\begin{exam}<% if node.args.title != null or node.args.titleTex != null %>{<< components.helpers.title(node=node) >>}<% endif %>
+
+\vskip20pt
+{\LARGE\textbf{Vorblatt}}
+\vskip20pt
+
+Für die Bearbeitung der Aufgaben des Prüfungsteils A sind Zeichengeräte und ein
+Wörterbuch zur deutschen Rechtschreibung zugelassen. Eine Verwendung von
+weiteren Hilfsmitteln ist nicht zulässig.
+
+Sie müssen den Prüfungsteil A \textbf{spätestens << node.args.timePartA | default(value=35) >> Minuten} nach Prüfungsbeginn
+abgeben. Die Hilfsmittel Taschenrechner und Formelsammlung erhalten Sie nach
+Abgabe von Prüfungsteil A.
+
+Sie müssen die \textbf{drei Pflichtaufgaben und zwei Wahlpflichtaufgaben} im
+Prüfungsteil A bearbeiten.
+
+\textbf{Tragen Sie die Aufgabennummern der zwei Wahlpflichtaufgaben ein, die
+bewertet werden sollen.}
+
+\vskip20pt
+Wahlpflichtaufgabe Nr. \hbox to 4cm{\hrulefill}
+\vskip10pt
+Wahlpflichtaufgabe Nr. \hbox to 4cm{\hrulefill}
+\vskip30pt
+\textbf{Bestätigen Sie Ihre Entscheidung mit Ihrer Unterschrift.}
+\vskip10pt
+\hbox to \textwidth{Name, Vorname des Prüflings: \kern3.4cm\leaders\hrule\hfill}\vskip10pt
+\hbox to \textwidth{Unterschrift des Prüflings:  \kern4cm\leaders\hrule\hfill}
+
+\newpage
+
+<< components.helpers.blocks(nodes=node.children) >>
+<# \setpoints is needed when only some exercises are graded #>
+
+\vskip20pt
+\textbf{Zugelassene Hilfsmittel für Prüfungsteil B:}
+\begin{itemize}
+\item CAS-Taschenrechner 
+\item Formelsammlung
+\item Wörterbuch zur deutschen Rechtschreibung
+\end{itemize}
+
+
+<% if node.args.totalPoints != null %>
+\setpoints{<< node.args.totalPoints >>}
+<% endif %>
+\end{exam}
+\end{document}

@@ -1,0 +1,23 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<# Flap (args.kind "flap"): title, planning, stations and retro come from the document. #>
+\documentclass[nocopyright]{edoxarticle}
+\usepackage{edoxflap}
+
+
+\begin{document}
+\begin{flap}{<< components.helpers.title(node=node) >>}{\underline{\hspace{3cm}}}
+\sprintplanning{<< node.args.planning | default(value="") | text >>}
+
+\stations{%
+<% for s in node.args.stations | default(value=[]) %>
+\stationrow{<< s.number >>}{<< s.title | text >>}<% if loop.last %>%<% endif %>
+<% endfor %>
+}
+
+\sprintretro{<< node.args.retro | default(value="") | text >>}
+
+\parentsign
+
+\end{flap}
+
+\end{document}

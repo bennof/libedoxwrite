@@ -1,0 +1,39 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<# The exam: document class, preamble, the exam environment. #>
+\documentclass[lang=ngerman]{edoxarticle}
+
+<% if node.args.macros | default(value=[]) | length > 0 %>
+
+<% for m in node.args.macros %>
+\<% if m.provide %>providecommand<% else %>newcommand<% endif %>{\<< m.name >>}<% if m.args != null %>[<< m.args >>]<% endif %><% if m.default != null %>[<< m.default >>]<% endif %>{<< m.body >>}
+<% endfor %>
+<% endif %>
+<% if node.args.examName != null %>
+\renewcommand\examname{<< node.args.examName >>}
+<% endif %>
+<% if node.args.pointsName != null %>
+\renewcommand\pointsname{<< node.args.pointsName >>}
+<% endif %>
+
+\begin{document}
+<% if node.args.date != null %>
+\pdate{<< node.args.date >>}
+<% endif %>
+\begin{exam}<% if node.args.title != null or node.args.titleTex != null %>{<< components.helpers.title(node=node) >>}<% endif %>
+
+<< components.helpers.blocks(nodes=node.children) >>
+<# \setpoints is needed when only some exercises are graded #>
+
+\vskip20pt
+\textbf{Zugelassene Hilfsmittel für Prüfungsteil B:}
+\begin{itemize}
+\item CAS-Taschenrechner 
+\item Formelsammlung
+\item Wörterbuch zur deutschen Rechtschreibung
+\end{itemize}
+
+<% if node.args.totalPoints != null %>
+\setpoints{<< node.args.totalPoints >>}
+<% endif %>
+\end{exam}
+\end{document}

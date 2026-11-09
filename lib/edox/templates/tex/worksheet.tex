@@ -1,0 +1,27 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<# Worksheet or test (args.kind): the components are those of the exams. #>
+<% set env = node.args.kind | default(value="worksheet") %>
+\documentclass<% if node.args.documentOptions != null %>[<< node.args.documentOptions >>]<% endif %>{<< node.args.documentClass | default(value="edoxarticle") >>}
+
+<% if node.args.macros | default(value=[]) | length > 0 %>
+<% for m in node.args.macros %>
+\<% if m.provide %>providecommand<% else %>newcommand<% endif %>{\<< m.name >>}<% if m.args != null %>[<< m.args >>]<% endif %><% if m.default != null %>[<< m.default >>]<% endif %>{<< m.body >>}
+<% endfor %>
+<% endif %>
+<% if node.args.examName != null %>
+\renewcommand\<< env >>name{<< node.args.examName >>}
+<% endif %>
+<% if node.args.pointsName != null %>
+\renewcommand\pointsname{<< node.args.pointsName >>}
+<% endif %>
+
+\begin{document}
+<% if node.args.date != null %>
+\pdate{<< node.args.date >>}
+<% endif %>
+\begin{<< env >>}[<% if node.args.solutions == false %>nosolution<% else %>solution<% endif %>]{<< components.helpers.title(node=node) >>}
+
+<< components.helpers.blocks(nodes=node.children) >>
+
+\end{<< env >>}
+\end{document}

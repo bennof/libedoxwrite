@@ -1,0 +1,6 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<% component components.figure(node: object) %>
+\begin{center}
+<< components.helpers.join(nodes=node.children, sep="\n\\hfill\n") >>
+\end{center}
+<%- endcomponent %>

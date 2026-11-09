@@ -1,0 +1,7 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<% component components.exercise(node: object) %>
+<% if node.args.newPage %>
+\newpage
+<% endif %>
+\exercise<% if node.args.starred %>*<% endif %><% if node.args.title != null or node.args.titleTex != null %>[<< components.helpers.title(node=node) >>]<% endif %><< components.helpers.body(node=node) >>
+<%- endcomponent %>

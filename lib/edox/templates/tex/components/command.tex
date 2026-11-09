@@ -1,0 +1,3 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<# Node types without a component of their own: \name[opt]{children}. #>
+<% component components.command(node: object) %>\<< node.type >><% if node.args.opt != null %>[<< node.args.opt >>]<% endif %><% if node.children | length > 0 %>{<< components.helpers.inline(nodes=node.children) >>}<% endif %><% endcomponent %>

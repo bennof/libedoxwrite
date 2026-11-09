@@ -1,0 +1,8 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<% component components.solution(node: object) %>
+<% if node.args.inline %>
+\solve{<< components.helpers.blocks(nodes=node.children) >>}<% else -%>
+\solve{
+<< components.helpers.blocks(nodes=node.children) >>
+}<% endif %>
+<%- endcomponent %>

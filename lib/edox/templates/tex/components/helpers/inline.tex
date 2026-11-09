@@ -1,0 +1,5 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<# Inline nodes, one after the other; glue keeps a control word from swallowing what follows. #>
+<% component components.helpers.inline(nodes: array) %>
+<% for c in nodes %><% if not loop.first %><< glue() >><% endif %><< render(node=c) >><% endfor %>
+<%- endcomponent %>

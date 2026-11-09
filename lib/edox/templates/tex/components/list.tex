@@ -1,0 +1,10 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<% component components.list(node: object) %>
+<% set env = "itemize" %>
+<% if node.args.ordered %>
+<% set env = "enumerate" %>
+<% endif %>
+\begin{<< env >>}
+<< components.helpers.join(nodes=node.children, sep="\n") >>
+\end{<< env >>}
+<%- endcomponent %>

@@ -1,0 +1,5 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<# Title as TeX (titleTex) or as plain text (title). #>
+<% component components.helpers.title(node: object) %>
+<% if node.args.titleTex != null %><< node.args.titleTex >><% else %><< node.args.title | text >><% endif %>
+<%- endcomponent %>

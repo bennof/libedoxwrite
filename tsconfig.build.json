@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "rootDir": ".",
+    "outDir": "./dist",
+    "declaration": true,
+    "sourceMap": true,
+    "rewriteRelativeImportExtensions": true
+  },
+  "include": [
+    "lib/**/*.ts",
+    "cli.ts"
+  ],
+  "exclude": [
+    "lib/**/*.test.ts",
+    "tests/**/*.ts",
+    "dist"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "libedoxwrite",
+  "version": "0.1.0",
+  "description": "TypeScript library and CLI for converting edox TeX, JSON, and Markdown documents",
+  "author": "Benjamin Benno Falkner <bennof@falkner.xyz>",
+  "type": "module",
+  "main": "./dist/lib/index.js",
+  "types": "./dist/lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/lib/index.d.ts",
+      "import": "./dist/lib/index.js"
+    }
+  },
+  "bin": {
+    "edoxwrite": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "THIRD-PARTY-LICENSES.txt",
+    "THIRD-PARTY-LICENSES.json"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json && node scripts/copy-templates.mjs",
+    "check": "tsc --project tsconfig.json --pretty false",
+    "test": "node --import=tsx --test lib/template/*.test.ts tests/*.test.ts",
+    "prepack": "npm run check && npm test && npm run build && npm run licenses",
+    "licenses": "node scripts/bundle-licenses.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "license-checker-rseidelsohn": "^5.0.1",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3"
+  }
+}

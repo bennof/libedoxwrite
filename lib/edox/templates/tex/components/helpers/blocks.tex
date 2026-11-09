@@ -1,0 +1,5 @@
+<# Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT #>
+<# Block nodes with a line break or a blank line (= \par) between them; prev: type of the node before the first. #>
+<% component components.helpers.blocks(nodes: array, prev: string = "") %>
+<% for b in blocks(nodes=nodes, prev=prev) %><< b.sep >><< render(node=b.node) >><% endfor %>
+<%- endcomponent %>

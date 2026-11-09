@@ -1,0 +1,1086 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:edox:document",
+  "title": "edox document",
+  "description": "An edox document (exam) as stored in JSON: a tree of { type, args, children }. Empty args and children are left out and not allowed (compactNode in node.ts). Produced by parser/texparser.ts, rendered by the templates in templates/ (renderer/rendertemplate.ts) and renderer/renderhtml.ts. Copyright (c) 2026 Benjamin Benno Falkner, SPDX-License-Identifier: MIT.",
+  "$ref": "#/$defs/exam",
+  "$defs": {
+    "tex": {
+      "type": "string",
+      "description": "LaTeX source, written as it is."
+    },
+    "text": {
+      "type": "string",
+      "description": "Plain text; escaped for LaTeX and HTML when rendered."
+    },
+    "length": {
+      "type": "string",
+      "description": "A TeX length, e.g. \"10pt\", \"4cm\", \"0.5\\\\textwidth\"."
+    },
+    "points": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Derived by the parser (sum of points, a choice counts only the selected exercises); ignored when rendering."
+    },
+    "newPage": {
+      "type": "boolean",
+      "description": "Start on a new page (\\newpage before the element)."
+    },
+    "title": {
+      "$ref": "#/$defs/text",
+      "description": "Title as plain text."
+    },
+    "titleTex": {
+      "$ref": "#/$defs/tex",
+      "description": "Title as LaTeX (e.g. with math), used instead of title."
+    },
+    "exam": {
+      "type": "object",
+      "description": "The root: one exam.",
+      "properties": {
+        "type": {
+          "const": "exam"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "description": "Further arguments are allowed: a format (template) may read its own, e.g. timePartA.",
+          "properties": {
+            "format": {
+              "type": "string",
+              "description": "Template to render with, e.g. \"exam_ef\" → templates/tex/exam_ef.tex; without it base.tex.",
+              "examples": [
+                "exam_ef",
+                "exam_q-phase"
+              ]
+            },
+            "kind": {
+              "enum": [
+                "test",
+                "worksheet",
+                "flap"
+              ],
+              "description": "Kind of document; without it an exam. Worksheets and tests render with worksheet.tex, flaps with flap.tex, unless a format is given."
+            },
+            "planning": {
+              "type": "string",
+              "description": "Flap: text of \\sprintplanning."
+            },
+            "retro": {
+              "type": "string",
+              "description": "Flap: text of \\sprintretro."
+            },
+            "stations": {
+              "type": "array",
+              "description": "Flap: the rows of \\stations; besides title, planning and retro everything else on the flap comes from flap.tex.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "number": {
+                    "type": [
+                      "integer",
+                      "string"
+                    ]
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "number",
+                  "title"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "solutions": {
+              "type": "boolean",
+              "description": "false: \\begin{…}[nosolution], solutions are hidden. Default true."
+            },
+            "examName": {
+              "$ref": "#/$defs/tex",
+              "description": "\\renewcommand\\examname, e.g. \"Klausur 1\"."
+            },
+            "pointsName": {
+              "$ref": "#/$defs/tex",
+              "description": "\\renewcommand\\pointsname, e.g. \"BE\"."
+            },
+            "title": {
+              "$ref": "#/$defs/title"
+            },
+            "titleTex": {
+              "$ref": "#/$defs/titleTex"
+            },
+            "date": {
+              "type": "string",
+              "description": "\\pdate{…}; an empty string still writes \\pdate{}."
+            },
+            "totalPoints": {
+              "type": "number",
+              "minimum": 0,
+              "description": "\\setpoints{…}: the graded maximum. Needed with a choice of exercises, because TeX sums all points."
+            },
+            "points": {
+              "$ref": "#/$defs/points"
+            },
+            "macros": {
+              "type": "array",
+              "description": "\\newcommand / \\providecommand of the preamble; also given to KaTeX for the HTML page.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z@]+$",
+                    "description": "Without backslash."
+                  },
+                  "args": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 9
+                  },
+                  "default": {
+                    "$ref": "#/$defs/tex",
+                    "description": "Default of the first argument."
+                  },
+                  "body": {
+                    "$ref": "#/$defs/tex"
+                  },
+                  "provide": {
+                    "type": "boolean",
+                    "description": "\\providecommand instead of \\newcommand."
+                  }
+                },
+                "required": [
+                  "name",
+                  "body"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "timePartA": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Format exam_q-phase: minutes for exam part A (default 35)."
+            },
+            "timePartB": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Format exam_q-phase: minutes for exam part B, for planning (not printed). The total time is timePartA + timePartB; import sets 55."
+            },
+            "documentClass": {
+              "type": "string",
+              "description": "Only for base.tex; formats set the class themselves. Default edoxarticle."
+            },
+            "documentOptions": {
+              "type": "string",
+              "description": "Only for base.tex, e.g. \"lang=ngerman\"."
+            }
+          }
+        },
+        "children": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/examChild"
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "examChild": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/section"
+        },
+        {
+          "$ref": "#/$defs/exercise"
+        },
+        {
+          "$ref": "#/$defs/block"
+        }
+      ]
+    },
+    "sectionChild": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/exercise"
+        },
+        {
+          "$ref": "#/$defs/block"
+        }
+      ]
+    },
+    "exerciseChild": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/task"
+        },
+        {
+          "$ref": "#/$defs/solution"
+        },
+        {
+          "$ref": "#/$defs/block"
+        }
+      ]
+    },
+    "taskChild": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/solution"
+        },
+        {
+          "$ref": "#/$defs/block"
+        }
+      ]
+    },
+    "section": {
+      "type": "object",
+      "description": "A part of the exam, \\wssection[id]{title}.",
+      "properties": {
+        "type": {
+          "const": "section"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Short title for the page head, e.g. \"A\", \"AP\"."
+            },
+            "title": {
+              "$ref": "#/$defs/title"
+            },
+            "titleTex": {
+              "$ref": "#/$defs/titleTex"
+            },
+            "choice": {
+              "type": "object",
+              "description": "Choice of exercises: only `select` of them are graded.",
+              "properties": {
+                "select": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "required": [
+                "select"
+              ],
+              "additionalProperties": false
+            },
+            "newPage": {
+              "$ref": "#/$defs/newPage"
+            },
+            "command": {
+              "type": "string",
+              "description": "Sectioning command when not \\wssection."
+            },
+            "points": {
+              "$ref": "#/$defs/points"
+            }
+          },
+          "additionalProperties": false
+        },
+        "children": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/sectionChild"
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "exercise": {
+      "type": "object",
+      "description": "An exercise, \\exercise[title]{…}. Its number is the field name prefix in the PDF (points-<exercise>-…, Sum-Points-<exercise>).",
+      "properties": {
+        "type": {
+          "const": "exercise"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "title": {
+              "$ref": "#/$defs/title"
+            },
+            "titleTex": {
+              "$ref": "#/$defs/titleTex"
+            },
+            "starred": {
+              "type": "boolean",
+              "description": "\\exercise*: the title is printed as it is, without automatic number."
+            },
+            "newPage": {
+              "$ref": "#/$defs/newPage"
+            },
+            "points": {
+              "$ref": "#/$defs/points"
+            }
+          },
+          "additionalProperties": false
+        },
+        "children": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/exerciseChild"
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "task": {
+      "type": "object",
+      "description": "A subexercise (Teilaufgabe), \\subexercise[width]{…}.",
+      "properties": {
+        "type": {
+          "const": "task"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "width": {
+              "$ref": "#/$defs/length"
+            },
+            "starred": {
+              "type": "boolean"
+            },
+            "newPage": {
+              "$ref": "#/$defs/newPage"
+            },
+            "points": {
+              "$ref": "#/$defs/points"
+            }
+          },
+          "additionalProperties": false
+        },
+        "children": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/taskChild"
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "solution": {
+      "type": "object",
+      "description": "The solution of an exercise or subexercise, \\solve{…}.",
+      "properties": {
+        "type": {
+          "const": "solution"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "inline": {
+              "type": "boolean",
+              "description": "\\solve{…} on one line."
+            }
+          },
+          "additionalProperties": false
+        },
+        "children": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/block"
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "block": {
+      "description": "Content on its own line or paragraph.",
+      "anyOf": [
+        {
+          "$ref": "#/$defs/paragraph"
+        },
+        {
+          "$ref": "#/$defs/hint"
+        },
+        {
+          "$ref": "#/$defs/displaymath"
+        },
+        {
+          "$ref": "#/$defs/points_node"
+        },
+        {
+          "$ref": "#/$defs/figure"
+        },
+        {
+          "$ref": "#/$defs/list"
+        },
+        {
+          "$ref": "#/$defs/table"
+        },
+        {
+          "$ref": "#/$defs/answerspace"
+        },
+        {
+          "$ref": "#/$defs/vspace"
+        },
+        {
+          "$ref": "#/$defs/raw"
+        },
+        {
+          "$ref": "#/$defs/any"
+        }
+      ]
+    },
+    "inline": {
+      "description": "Content within a paragraph.",
+      "anyOf": [
+        {
+          "$ref": "#/$defs/text_node"
+        },
+        {
+          "$ref": "#/$defs/math"
+        },
+        {
+          "$ref": "#/$defs/bold"
+        },
+        {
+          "$ref": "#/$defs/emph"
+        },
+        {
+          "$ref": "#/$defs/points_node"
+        },
+        {
+          "$ref": "#/$defs/linebreak"
+        },
+        {
+          "$ref": "#/$defs/ctrlspace"
+        },
+        {
+          "$ref": "#/$defs/raw"
+        },
+        {
+          "$ref": "#/$defs/any"
+        }
+      ]
+    },
+    "paragraph": {
+      "type": "object",
+      "description": "A paragraph of inline content. A leading \"(i)\", \"(1)\" … is simply text.",
+      "properties": {
+        "type": {
+          "const": "paragraph"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {},
+          "additionalProperties": false
+        },
+        "children": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/inline"
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "hint": {
+      "type": "object",
+      "description": "A hint (paragraph that was only \\emph{…}).",
+      "properties": {
+        "type": {
+          "const": "hint"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {},
+          "additionalProperties": false
+        },
+        "children": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/inline"
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "displaymath": {
+      "type": "object",
+      "description": "Display math, \\[…\\] or \\begin{env}…\\end{env}.",
+      "properties": {
+        "type": {
+          "const": "displaymath"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "tex": {
+              "$ref": "#/$defs/tex"
+            },
+            "env": {
+              "type": "string",
+              "description": "Environment, e.g. \"align*\"; without it \\[…\\]."
+            }
+          },
+          "required": [
+            "tex"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "type",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    "points_node": {
+      "type": "object",
+      "description": "Points to award, \\pp or \\pp[value]: one form field per point (points-<exercise>-<subexercise>-<position>).",
+      "properties": {
+        "type": {
+          "const": "points"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "description": "Default 1."
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "figure": {
+      "type": "object",
+      "description": "Graphics side by side.",
+      "properties": {
+        "type": {
+          "const": "figure"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {},
+          "additionalProperties": false
+        },
+        "children": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/tikz"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "children"
+      ],
+      "additionalProperties": false
+    },
+    "tikz": {
+      "type": "object",
+      "description": "A tikzpicture.",
+      "properties": {
+        "type": {
+          "const": "tikz"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "code": {
+              "$ref": "#/$defs/tex",
+              "description": "Body of the tikzpicture."
+            },
+            "options": {
+              "$ref": "#/$defs/tex",
+              "description": "Options [ … ] of the tikzpicture."
+            }
+          },
+          "required": [
+            "code"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "type",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    "list": {
+      "type": "object",
+      "description": "itemize, or enumerate with ordered.",
+      "properties": {
+        "type": {
+          "const": "list"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "ordered": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "children": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/item"
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "item"
+        },
+        "children": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/block"
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "table": {
+      "type": "object",
+      "description": "A table (tabular): cells in args.rows[row][column], each a list of inline nodes.",
+      "properties": {
+        "type": {
+          "const": "table"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "pattern": "^([lcr]|[pcr]\\{[^{}]+\\})$"
+              },
+              "description": "Per column: l, c, r; p{width} (left, wrapped), c{width} or r{width} (centered or right aligned, fixed width)."
+            },
+            "rows": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/inline"
+                  }
+                }
+              },
+              "description": "rows[row][cell]: the inline nodes of a cell; a cell in spans takes several columns."
+            },
+            "rules": {
+              "enum": [
+                "grid"
+              ],
+              "description": "grid: lines around every cell; without it no lines."
+            },
+            "compact": {
+              "type": "boolean",
+              "description": "No space at the left and right edge (@{} … @{})."
+            },
+            "rowSpace": {
+              "$ref": "#/$defs/length",
+              "description": "Extra space after every row ending with \\\\ (\\\\[…]): with rules all rows, else all but the last."
+            },
+            "rowSpaces": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/length"
+                  },
+                  {
+                    "const": ""
+                  }
+                ]
+              },
+              "description": "Extra space after each row, \"\" for none; instead of rowSpace when the rows differ."
+            },
+            "stretch": {
+              "type": "string",
+              "pattern": "^\\d+(\\.\\d+)?$",
+              "description": "Factor for the row height (\\\\arraystretch)."
+            },
+            "spans": {
+              "type": "array",
+              "description": "Cells over several columns (\\\\multicolumn).",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "row": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "column": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Index of the cell in its row."
+                  },
+                  "columns": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "align": {
+                    "enum": [
+                      "l",
+                      "c",
+                      "r"
+                    ]
+                  }
+                },
+                "required": [
+                  "row",
+                  "column",
+                  "columns",
+                  "align"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "center": {
+              "type": "boolean",
+              "description": "Centered (center environment)."
+            }
+          },
+          "required": [
+            "columns",
+            "rows"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "type",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    "answerspace": {
+      "type": "object",
+      "description": "Room for the answer, \\answerbox{height} or \\mathbox{height}.",
+      "properties": {
+        "type": {
+          "const": "answerspace"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "kind": {
+              "enum": [
+                "answerbox",
+                "mathbox"
+              ]
+            },
+            "height": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "height"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "type",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    "vspace": {
+      "type": "object",
+      "description": "Vertical space, \\vskip<size>.",
+      "properties": {
+        "type": {
+          "const": "vspace"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "size": {
+              "$ref": "#/$defs/length"
+            }
+          },
+          "required": [
+            "size"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "type",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    "raw": {
+      "type": "object",
+      "description": "LaTeX without a mapping, written as it is (block or inline).",
+      "properties": {
+        "type": {
+          "const": "raw"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "tex": {
+              "$ref": "#/$defs/tex"
+            }
+          },
+          "required": [
+            "tex"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "type",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    "text_node": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "text"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "value": {
+              "$ref": "#/$defs/text"
+            }
+          },
+          "required": [
+            "value"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "type",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    "math": {
+      "type": "object",
+      "description": "Inline math, $…$.",
+      "properties": {
+        "type": {
+          "const": "math"
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1,
+          "properties": {
+            "tex": {
+              "$ref": "#/$defs/tex"
+            }
+          },
+          "required": [
+            "tex"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "type",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    "bold": {
+      "type": "object",
+      "description": "\\textbf{…}.",
+      "properties": {
+        "type": {
+          "const": "bold"
+        },
+        "children": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/inline"
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "emph": {
+      "type": "object",
+      "description": "\\emph{…}.",
+      "properties": {
+        "type": {
+          "const": "emph"
+        },
+        "children": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/inline"
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "linebreak": {
+      "type": "object",
+      "description": "\\\\.",
+      "properties": {
+        "type": {
+          "const": "linebreak"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "ctrlspace": {
+      "type": "object",
+      "description": "Control space \\␣, e.g. after an abbreviation.",
+      "properties": {
+        "type": {
+          "const": "ctrlspace"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "any": {
+      "type": "object",
+      "description": "A node of a type this schema does not know, e.g. from edox markdown (:::name … ::: or ::name::). It is kept in the document; the renderers pass over it or use their fallback.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][\\w.-]*$",
+          "not": {
+            "enum": [
+              "answerspace",
+              "bold",
+              "ctrlspace",
+              "displaymath",
+              "emph",
+              "exam",
+              "exercise",
+              "figure",
+              "hint",
+              "item",
+              "linebreak",
+              "list",
+              "math",
+              "paragraph",
+              "points",
+              "raw",
+              "section",
+              "solution",
+              "table",
+              "task",
+              "text",
+              "tikz",
+              "vspace"
+            ]
+          }
+        },
+        "args": {
+          "type": "object",
+          "minProperties": 1
+        },
+        "children": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/block"
+              },
+              {
+                "$ref": "#/$defs/inline"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
